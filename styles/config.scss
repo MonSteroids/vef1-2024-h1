@@ -1,0 +1,57 @@
+/* Stillingar */
+  
+
+$font-size-base:16px;
+$font-size-headings:1.5rem;
+
+/* Grunn bilið okkar er 1rem == 16px */
+$spacing:1rem;
+
+/* Grid stillingar */
+$columns:12;
+$gutter:30px;
+$offset:20px;
+
+/* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+$vertical-space:calc(($gutter) * 1);
+$vertical-space-large:calc(($gutter) * 1.5);
+
+/* Hámarks og lágmarks breidd á efni */
+$max-width:1600px;
+$min-width-image:200px;
+$max-width-image:300px;
+$max-width-footer-section:250px;
+
+/* Border breiddir */
+$border-regular:1px solid black;
+$border-width:1px;
+$border-radius-regular:5px;
+$border-radius-image:10px;
+
+/* Litir */
+/** Litir með nafni **/
+$color-white:#ffffff;
+$color-black:#000000;
+$color-off-white:#fafafa;
+$color-beige:#f7f1eb;
+$color-brown:#e3cdb1;
+$color-light-gray:#D0D0D0;
+$color-dark-gray:#9B9B9B;
+
+/** Litir með notkun **/
+$color-background:($color-off-white);
+$color-background-newsletter:($color-black);
+$color-background-announcement: ($color-beige);
+$color-brown-text: ($color-brown);
+$color-light-gray-text: ($color-light-gray);
+$color-dark-gray-text: ($color-dark-gray);
+
+/* Letur stillingar */
+$font-base-size:1rem;
+$font-family-base:'Poppins', Arial, Helvetica, sans-serif;
+$font-family-heading:'Playfair-Display', 'Comic Sans MS', cursive;
+
+/* Transitions */
+$transition-time-short:300ms;
+$transition-time-long:600ms;
+$transition-timing-function:ease-in-out;
