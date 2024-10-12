@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
     <title>Kokkasíða?</title>
+    <script>
+      document.querySelector('.navbar__menu-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('menu-open');
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Kokkasíðan</h1>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <img src="myndir/logo-nav.jpg" alt="yum yum logo">
+          </div>
+          <div class="navbar__menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navbar__menu">
+            <li><a href="pages/recipes.html">Recipes</a></li>
+            <li><a href="pages/vidoes.html">Videos</a></li>
+            <li><a href="index.html">About us</a></li>
+          </ul>
+        </nav>
       </header>
 
       <p class="sr-only"><a href="#efni">Beint í efni</a></p>
 
       <div class="wrapper-content">
-
-      <!-- Intro og nav eru í sama card á Figma, en navigation er fyrir ofan Hero-section á Figma listanum -->
-        <nav class="wrapper-nav">
-          <ul>
-            <li><strong>yum&yum</strong></li>
-            <li><a href="sidur/spil.html">Recipes</a></li>
-            <li><a href="sidur/vidburdir.html">Videos</a></li>
-            <li><a href="sidur/skraning.html">About us</a></li>
-          </ul>
-        </nav>
-
         <main id="efni" class="wrapper-main">
           <div class="content">
             <div class="intro">
