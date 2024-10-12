@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Playfair-Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Playfair-Display';
+    font-weight: 700;
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Playfair-Display';
+    font-weight: 800;
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf') format('truetype');
+  }
+  
+  /*** Allt meginmál notar poppins ***/
+  html,
+  input,
+  select,
+  button {
+    font-family: var(--font-family-base);
+  }
+  
+  /*** Allar fyrirsagnir nota Playfair-Display ***/
+  h1,
+  h2,
+  h3,
+  legend {
+    font-family: var(--font-family-heading);
+  }
