@@ -1,5 +1,4 @@
 img {
-    /* Eina css so far því img voru óþægilega stór */
     max-width: 100px;
     max-height: 100px;
 }
@@ -13,5 +12,5 @@ img {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-  }
+}
 
