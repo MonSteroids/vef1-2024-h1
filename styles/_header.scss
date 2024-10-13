@@ -1,3 +1,8 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 .navbar {
     width: 100%;
@@ -6,9 +11,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     padding-left: $spacing;
     padding-right: $spacing;
     
@@ -84,6 +86,14 @@
     }
 
     @media(min-width: 700px) {
+        margin-top: $spacing;
+        padding-left: 155px;
+        padding-right: 155px;
+
+        &__logo img {
+          width: 133px;
+          height: 25px;
+        }
 
         &__menu-toggle {
           display: none; // Hide hamburger icon
@@ -95,7 +105,7 @@
 
     
           li {
-            margin: 15px;
+            margin: 10px;
             background-color: $color-background-white;
             a {
               font-size: 20px;

@@ -1,0 +1,122 @@
+.announcement-section {
+    background-color: $color-background-announcement;
+    position: relative;
+    padding: 20px;
+
+    .announcement-time {
+        display: none;
+    }
+    .book-out {
+        font-weight: 700px;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+
+    .announcement-text {
+        font-size: $font-base-size;
+        color: $color-darker-gray-text;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .go-to-store-button {
+        text-align: center;
+
+        .button {
+            width: 191px;
+            height: 42px;
+            color: $color-brown-text;
+            border-color: $color-brown-text;
+            background-color: $color-background-announcement;
+
+            &:hover {
+                background-color: $color-brown;
+                color: $color-white;
+            }
+        }
+    }
+    .see-more-button {
+        text-align: center;
+        display: none;
+
+        .button {
+            width: 191px;
+            height: 42px;
+            color: $color-brown-text;
+            border-color: $color-brown-text;
+            background-color: $color-background-announcement;
+
+            &:hover {
+                background-color: $color-brown;
+                color: $color-white;
+            }
+        }
+    }
+
+    .yam-image {
+        text-align: center;
+        margin-top: calc($spacing * 5);
+        display: block;
+        margin-bottom: -140px;
+        
+        img {
+            width: 205px;
+        }
+    }
+
+    @media(min-width: 700px) {
+
+
+        .announcement-time {
+            display: block;
+            text-align: left;
+            color: $color-brown-text;
+            margin-bottom: 0;
+        }
+        
+
+        .book-out {
+            text-align: left;
+            margin-bottom: $spacing;
+            font-size: 40px;
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .announcement-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .announcement-left {
+
+                margin: calc($spacing * 4);
+            }
+        }
+
+        .announcement-text {
+            line-height: normal;
+            padding: 0;
+        }
+
+        .go-to-store-button {
+            display: none;
+            .button {
+                display: none;
+            }
+        }
+
+        .see-more-button {
+            text-align: left;
+            display: block;
+        }
+
+        .yam-image {
+            img {
+                width: 440px;
+            }
+        }
+    }
+}

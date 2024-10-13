@@ -11,6 +11,12 @@
 /** Litir með notkun **/
 /* Letur stillingar */
 /* Transitions */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .navbar {
   width: 100%;
   height: 60px;
@@ -18,9 +24,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -80,6 +83,15 @@
   display: block;
 }
 @media (min-width: 700px) {
+  .navbar {
+    margin-top: 1rem;
+    padding-left: 155px;
+    padding-right: 155px;
+  }
+  .navbar__logo img {
+    width: 133px;
+    height: 25px;
+  }
   .navbar__menu-toggle {
     display: none;
   }
@@ -88,7 +100,7 @@
     flex-direction: row;
   }
   .navbar__menu li {
-    margin: 15px;
+    margin: 10px;
     background-color: #ffffff;
   }
   .navbar__menu li a {
@@ -117,31 +129,31 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("./fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Playfair-Display";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Playfair-Display";
   font-weight: 700;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("truetype");
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Playfair-Display";
   font-weight: 800;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("truetype");
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("truetype");
 }
 /*** Allt meginmál notar poppins ***/
 html,
 input,
 select,
 button {
-  font-family: var(--font-family-base);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 /*** Allar fyrirsagnir nota Playfair-Display ***/
@@ -149,7 +161,7 @@ h1,
 h2,
 h3,
 legend {
-  font-family: var(--font-family-heading);
+  font-family: "Playfair-Display", "Comic Sans MS", cursive;
 }
 
 /* Reiknum stærð á öllum boxum sem border-box */
@@ -173,6 +185,106 @@ html {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.announcement-section {
+  background-color: #f7f1eb;
+  position: relative;
+  padding: 20px;
+}
+.announcement-section .announcement-time {
+  display: none;
+}
+.announcement-section .book-out {
+  font-weight: 700px;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.announcement-section .announcement-text {
+  font-size: 1rem;
+  color: #5e5b69;
+  line-height: 24px;
+  text-align: center;
+}
+.announcement-section .go-to-store-button {
+  text-align: center;
+}
+.announcement-section .go-to-store-button .button {
+  width: 191px;
+  height: 42px;
+  color: #e3cdb1;
+  border-color: #e3cdb1;
+  background-color: #f7f1eb;
+}
+.announcement-section .go-to-store-button .button:hover {
+  background-color: #e3cdb1;
+  color: #ffffff;
+}
+.announcement-section .see-more-button {
+  text-align: center;
+  display: none;
+}
+.announcement-section .see-more-button .button {
+  width: 191px;
+  height: 42px;
+  color: #e3cdb1;
+  border-color: #e3cdb1;
+  background-color: #f7f1eb;
+}
+.announcement-section .see-more-button .button:hover {
+  background-color: #e3cdb1;
+  color: #ffffff;
+}
+.announcement-section .yam-image {
+  text-align: center;
+  margin-top: 5rem;
+  display: block;
+  margin-bottom: -140px;
+}
+.announcement-section .yam-image img {
+  width: 205px;
+}
+@media (min-width: 700px) {
+  .announcement-section .announcement-time {
+    display: block;
+    text-align: left;
+    color: #e3cdb1;
+    margin-bottom: 0;
+  }
+  .announcement-section .book-out {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 40px;
+  }
+  .announcement-section .book-out h2 {
+    margin: 0;
+  }
+  .announcement-section .announcement-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .announcement-section .announcement-wrapper .announcement-left {
+    margin: 4rem;
+  }
+  .announcement-section .announcement-text {
+    line-height: normal;
+    padding: 0;
+  }
+  .announcement-section .go-to-store-button {
+    display: none;
+  }
+  .announcement-section .go-to-store-button .button {
+    display: none;
+  }
+  .announcement-section .see-more-button {
+    text-align: left;
+    display: block;
+  }
+  .announcement-section .yam-image img {
+    width: 440px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
