@@ -28,6 +28,10 @@ $border-width:1px;
 $border-radius-regular:5px;
 $border-radius-image:10px;
 
+/* Menu */
+$menu-icon-width: 20px;
+$menu-icon-height: 13px;
+
 /* Litir */
 /** Litir með nafni **/
 $color-white:#ffffff;
@@ -39,7 +43,8 @@ $color-light-gray:#D0D0D0;
 $color-dark-gray:#9B9B9B;
 
 /** Litir með notkun **/
-$color-background:($color-off-white);
+$color-background-white: ($color-white);
+$color-background-off-white:($color-off-white);
 $color-background-newsletter:($color-black);
 $color-background-announcement: ($color-beige);
 $color-brown-text: ($color-brown);
