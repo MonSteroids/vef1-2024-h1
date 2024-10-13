@@ -18,10 +18,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .navbar__logo img {
-  height: 16.92px;
+  min-height: 16.92px;
+  max-height: 90px;
 }
 .navbar__menu-toggle {
   cursor: pointer;
@@ -30,12 +35,29 @@
   justify-content: space-between;
   width: 20px;
   height: 13px;
+  transition: all 0.3s ease-in-out;
 }
 .navbar__menu-toggle span {
-  background-color: #fafafa;
-  height: 112px;
+  background-color: #000000;
+  height: 1px;
   width: 100%;
   display: block;
+  transition: all 0.3s ease-in-out;
+}
+.navbar__menu-toggle.is-open span {
+  position: absolute;
+  width: 20px;
+}
+.navbar__menu-toggle.is-open span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.navbar__menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__menu-toggle.is-open span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: center;
 }
 .navbar__menu {
   list-style: none;
@@ -44,9 +66,15 @@
   display: none;
 }
 .navbar__menu li {
-  margin: 10px 0;
+  margin: 0;
+  background-color: #fafafa;
+  flex-grow: 1;
+  text-align: center;
 }
 .navbar__menu li a {
+  color: #000000;
+  font-size: 60px;
+  font-weight: 800;
   text-decoration: none;
   padding: 1rem;
   display: block;
@@ -60,7 +88,16 @@
     flex-direction: row;
   }
   .navbar__menu li {
-    margin: 0 15px;
+    margin: 15px;
+    background-color: #ffffff;
+  }
+  .navbar__menu li a {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+  }
+  .navbar__menu li:nth-child(1) {
+    display: none;
   }
 }
 
@@ -73,6 +110,69 @@
   background-color: #ffffff;
   width: 100%;
   text-align: center;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair-Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair-Display";
+  font-weight: 700;
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair-Display";
+  font-weight: 800;
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("truetype");
+}
+/*** Allt meginmál notar poppins ***/
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Playfair-Display ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */
