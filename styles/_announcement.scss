@@ -54,14 +54,34 @@
         }
     }
 
-    .yam-image {
-        text-align: center;
-        margin-top: calc($spacing * 5);
-        display: block;
-        margin-bottom: -140px;
-        
-        img {
-            width: 205px;
+    .announcement-right {
+        position: relative;
+        display: inline-block;
+
+        .yam-image {
+            position: relative;
+            text-align: center;
+            display: block;
+            margin-top: calc($spacing * 5);
+            margin-bottom: -140px;
+            
+            img {
+                width: 205px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .shadow {
+                position: absolute;
+                left: -15px;
+                top: 15px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                filter: blur(10px);
+                z-index: 0;
+                border-radius: $border-radius-regular;
+            }
         }
     }
 
@@ -113,10 +133,13 @@
             display: block;
         }
 
-        .yam-image {
-            img {
-                width: 440px;
+        .announcement-right {
+            .yam-image {
+                img {
+                    width: 440px;
+                }
             }
         }
+        
     }
 }
