@@ -3,7 +3,8 @@
 .cards {
     display: grid;
     border: var(--border-regular);
-    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-rows: 3fr;
     gap: var(--vertical-space); 
     justify-items: center;
     width: 100%; 
@@ -16,7 +17,17 @@
   
 .cards > .content {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: 3fr;
+    grid-template-rows: 3fr;
     gap: var(--vertical-space);
     width: 100%;
+}
+
+/* Litur fyrir "Check out our" */
+.cards > .content > .content-title > h2 > .part1 {
+    color: var(--color-gray);
+}
+
+.cards > .content p {
+    color: var(--color-yellow);
 }
