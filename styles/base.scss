@@ -1,0 +1,76 @@
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+
+body {
+  margin:0;
+  padding: 0;
+}
+  
+  /* og látum erfast á allt */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+  .sr-only:not(:focus, :active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+    max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+    color: inherit;
+}
+
+/*** ATH þarf orugglega eh að breyta ***/
+/*** Allar fyrirsagnir nota  Playfair_Display***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+
+/*** Allt meginmál notar Poppins ***/
+html,
+input,
+select,
+p,
+button,
+label {
+  font-family: var(--font-family-base);
+}
+
+
+/** button eins allsstaðar **/
+button {
+  border: var(--border-regular);
+  padding: var(--spacing);
+  width: var(--button-width);
+  background-color: var(--color-background-card);
+  color: var(--color-yellow-font);
+  margin: var(--spacing);
+}
+
+label {
+  font-size: var(--font-small-size);
+}
+
+

@@ -1,171 +1,179 @@
 @charset "UTF-8";
 /* Stillingar */
-/* Grunn bilið okkar er 1rem == 16px */
-/* Grid stillingar */
-/* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-/* Hámarks og lágmarks breidd á efni */
-/* Border breiddir */
-/* Menu */
-/* Litir */
-/** Litir með nafni **/
-/** Litir með notkun **/
-/* Letur stillingar */
-/* Transitions */
-.navbar {
-  width: 100%;
-  height: 60px;
-  background-color: #ffffff;
+:root {
+  --font-size-base: 16px;
+  --font-size-headings: 1.5rem;
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter) * 1);
+  --vertical-space-large: calc(var(--gutter) * 1.5);
+  /* Hámarks og lágmarks breidd á efni */
+  --max-width: 1200px;
+  --min-width-image: 200px;
+  --max-width-image: 300px;
+  --max-width-footer-section: 250px;
+  /* Border breiddir */
+  --border-width: 1px;
+  --border-radius-regular: 5px;
+  --border-radius-image: 10px;
+  --border-regular: 1px solid var(--color-yellow-font); /* todo longhand */
+  --border-with-background: 4px solid #c9b;
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+  /* Breidd á efni með offset */
+  --width-offset: calc(100% - (2 * var(--offset)));
+  /** Litir með nafni **/
+  --color-yellow: #E3CDB1;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-light: #e7e7e7;
+  --color-gray: #9b9b9b;
+  --color-gray-lighter: #d6d6d6;
+  /** Litir með notkun **/
+  --color-background-primary: var(--color-gray-light);
+  --color-background-card: var(--color-white);
+  --color-yellow-font: var(--color-yellow);
+  --color-gray-font: var(--color-gray);
+  --color-newletter-background: var(--color-black);
+  --color-footer-bottom-text: var(--color-gray-lighter);
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-small-size: 12px;
+  --font-footer-size: 14px;
+  --font-family-base: "Poppins", arial, helvetica, sans-serif;
+  --font-family-heading: "Playfair_Display", "Comic Sans MS", cursive;
+  /* Transitions */
+  --transition-time-short: 300ms;
+  --transition-time-long: 600ms;
+  --transition-timing-function: ease-in-out;
+  /* button stillingar */
+  --button-width: 190px ;
+}
+
+footer .content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.navbar__logo img {
-  min-height: 16.92px;
-  max-height: 90px;
-}
-.navbar__menu-toggle {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20px;
-  height: 13px;
-  transition: all 0.3s ease-in-out;
-}
-.navbar__menu-toggle span {
-  background-color: #000000;
-  height: 1px;
+  justify-content: center;
   width: 100%;
-  display: block;
-  transition: all 0.3s ease-in-out;
+  margin-top: calc(2 * var(--spacing));
+  margin-bottom: calc(2 * var(--spacing));
 }
-.navbar__menu-toggle.is-open span {
-  position: absolute;
-  width: 20px;
+
+footer .content p {
+  font-size: var(--font-footer-size);
 }
-.navbar__menu-toggle.is-open span:nth-child(1) {
-  transform: rotate(45deg);
-  transform-origin: center;
+
+footer .content .bottom-text {
+  color: var(--color-footer-bottom-text);
 }
-.navbar__menu-toggle.is-open span:nth-child(2) {
-  opacity: 0;
+
+footer > .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.navbar__menu-toggle.is-open span:nth-child(3) {
-  transform: rotate(-45deg);
-  transform-origin: center;
+
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-footer-bottom-text);
+  gap: 15px;
+  margin-top: calc(1.5 * var(--spacing));
+  margin-bottom: calc(1.5 * var(--spacing));
 }
-.navbar__menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
+
+footer .circle {
+  border: 2px solid var(--color-footer-bottom-text);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /* Flexbox to center the icons inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.navbar__menu li {
-  margin: 0;
-  background-color: #fafafa;
-  flex-grow: 1;
-  text-align: center;
-}
-.navbar__menu li a {
-  color: #000000;
-  font-size: 60px;
-  font-weight: 800;
+
+footer .circle a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
-  padding: 1rem;
-  display: block;
-}
-@media (min-width: 700px) {
-  .navbar__menu-toggle {
-    display: none;
-  }
-  .navbar__menu {
-    display: flex;
-    flex-direction: row;
-  }
-  .navbar__menu li {
-    margin: 15px;
-    background-color: #ffffff;
-  }
-  .navbar__menu li a {
-    font-size: 20px;
-    line-height: normal;
-    font-weight: normal;
-  }
-  .navbar__menu li:nth-child(1) {
-    display: none;
-  }
 }
 
-.menu-open .navbar__menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #ffffff;
+footer .circle i {
+  font-size: 18px; /* icon size */
+  color: var(--color-footer-bottom-text);
+}
+
+/*@import 'styles/nav';*/
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
   width: 100%;
-  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 var(--spacing);
 }
 
+.wrapper-newsletter {
+  width: 100%;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/** Letur og stærðir **/
+/*** Grunnstærð er 16px ***/
+html {
+  font-size: var(--font-size-base);
+}
+
+/** Leturgerðir **/
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: Poppins;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("../fonts/Poppins/Poppins-regular.ttf") format("woff2");
 }
 @font-face {
-  font-family: "Playfair-Display";
+  font-family: Playfair_Display;
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Playfair-Display";
   font-weight: 700;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-display: swap;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
 }
-@font-face {
-  font-family: "Playfair-Display";
-  font-weight: 800;
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("truetype");
-}
-/*** Allt meginmál notar poppins ***/
-html,
-input,
-select,
-button {
-  font-family: var(--font-family-base);
-}
-
-/*** Allar fyrirsagnir nota Playfair-Display ***/
-h1,
-h2,
-h3,
-legend {
-  font-family: var(--font-family-heading);
-}
-
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /* og látum erfast á allt */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -173,6 +181,199 @@ html {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/*** ATH þarf orugglega eh að breyta ***/
+/*** Allar fyrirsagnir nota  Playfair_Display***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/*** Allt meginmál notar Poppins ***/
+html,
+input,
+select,
+p,
+button,
+label {
+  font-family: var(--font-family-base);
+}
+
+/** button eins allsstaðar **/
+button {
+  border: var(--border-regular);
+  padding: var(--spacing);
+  width: var(--button-width);
+  background-color: var(--color-background-card);
+  color: var(--color-yellow-font);
+  margin: var(--spacing);
+}
+
+label {
+  font-size: var(--font-small-size);
+}
+
+.newsletter {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-newletter-background);
+  margin: 0;
+  padding: var(--spacing);
+  padding-top: calc(3 * var(--spacing));
+  padding-bottom: calc(3 * var(--spacing));
+}
+
+.newsletter > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter > .content section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: centeR;
+}
+
+.newsletter h2,
+.newsletter label {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.newsletter h2 {
+  font-size: 20px;
+}
+
+.newsletter p {
+  color: var(--color-yellow-font);
+  font-size: var(--font-small-size);
+  padding: 0;
+  margin: 0;
+}
+
+.newsletter button {
+  background-color: var(--color-newletter-background);
+}
+
+.newsletter form {
+  border: none;
+  border-color: var(--color-newletter-background);
+  margin-top: calc(2 * var(--spacing));
+}
+
+.newsletter form .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter form input {
+  display: block;
+  background: none;
+  border: black;
+  border-bottom: var(--border-regular);
+  font-size: 16px;
+  font-family: var(--font-family-heading);
+  margin-bottom: var(--spacing);
+}
+
+.newsletter form input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.newsletter form label {
+  display: block;
+  font-family: var(--font-family-base);
+}
+
+@media (min-width: 800px) {
+  .newsletter > .content section {
+    display: block;
+    margin: var(--spacing);
+  }
+  .newsletter > .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .newsletter form {
+    margin: 0;
+  }
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: calc(2 * var(--spacing));
+  margin-bottom: calc(2 * var(--spacing));
+}
+
+footer .content p {
+  font-size: var(--font-footer-size);
+}
+
+footer .content .bottom-text {
+  color: var(--color-footer-bottom-text);
+}
+
+footer > .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-footer-bottom-text);
+  gap: 15px;
+  margin-top: calc(1.5 * var(--spacing));
+  margin-bottom: calc(1.5 * var(--spacing));
+}
+
+footer .circle {
+  border: 2px solid var(--color-footer-bottom-text);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /* Flexbox to center the icons inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .circle a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+footer .circle i {
+  font-size: 18px; /* icon size */
+  color: var(--color-footer-bottom-text);
 }
 
 /*# sourceMappingURL=styles.css.map */

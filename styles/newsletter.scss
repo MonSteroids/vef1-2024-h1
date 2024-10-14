@@ -1,0 +1,95 @@
+
+.newsletter {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-newletter-background);
+    margin: 0;
+    padding: var(--spacing);
+    padding-top: calc(3*var(--spacing));
+    padding-bottom: calc(3*var(--spacing));
+}
+
+.newsletter > .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%
+}
+
+.newsletter > .content section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: centeR;
+}
+
+.newsletter h2,
+.newsletter label{
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.newsletter h2 {
+    font-size: 20px;
+}
+.newsletter p{
+    color: var(--color-yellow-font);
+    font-size: var(--font-small-size);
+    padding: 0;
+    margin: 0;
+}
+
+.newsletter button{
+    background-color: var(--color-newletter-background);
+}
+
+.newsletter form {
+    border: none;
+    border-color: var(--color-newletter-background);
+    margin-top: calc(2*var(--spacing));
+}
+
+.newsletter form .content{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter form input {
+    display: block;
+    background: none;
+    border: black;
+    border-bottom: var(--border-regular);
+    font-size: 16px;
+    font-family: var(--font-family-heading);
+    margin-bottom: var(--spacing);
+}
+
+.newsletter form input::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+
+.newsletter form label {
+    display: block;
+    font-family: var(--font-family-base);
+}
+
+
+@media (min-width: 800px){
+    .newsletter > .content section{
+        display: block;
+        margin: var(--spacing);
+    }
+
+    .newsletter > .content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newsletter form {
+        margin:0;
+    }
+}
