@@ -8,6 +8,7 @@ html {
 body {
   margin:0;
   padding: 0;
+  background-color: var(--color-background-primary);
 }
   
   /* og látum erfast á allt */
@@ -64,7 +65,7 @@ button {
   border: var(--border-regular);
   padding: var(--spacing);
   width: var(--button-width);
-  background-color: var(--color-background-card);
+  background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
 }

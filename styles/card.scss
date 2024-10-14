@@ -4,8 +4,9 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  width: calc(100%/3 - var(--spacing));
+  /*width: calc(100%/3 - var(--spacing));*/
   background-color: var(--color-background-card);
+  margin-bottom: var(--spacing);
 }
   
 .card img {
@@ -14,8 +15,8 @@
 
 .card > .content img {
   display: block;
-  border-top-left-radius: var(--border-radius-regular);
-  border-top-right-radius: var(--border-radius-regular);
+  /*border-top-left-radius: var(--border-radius-regular);
+  border-top-right-radius: var(--border-radius-regular);*/
   width: 100%;
   height: 290px;
   object-fit: cover;
@@ -41,28 +42,42 @@
     * > .content       <- sem er strax barn af .card
     * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
     */
+  /*
 .card:not(:has(> .image)) > .content {
   border: var(--border-regular);
 }
+  */
 
 .card > .content > .text {
-  padding: calc(var(--spacing) / 2);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing);
   color: var(--color-gray);
   flex: 1;
 }
 
-.card > .content > .text > .special-text {
+.card > .content > .text > section{
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.card > .content > .text > p {
+  font-size: var(--font-small-size);
+  color: var(--color-gray-font);
+}
+
+.card > .content > .text > section >.special-text {
   font-family: 'Playfair_Display';
   color: var(--color-black);
-  font-size: 22px;
+  font-size: 18px;
 }
 
-.card > .content > .text a {
-  display: flex;
+
+.card > .content > .text > section > a {
   color: var(--color-yellow);
-  justify-content: end;
-  padding: 0;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom:auto;
+  margin-top: auto;
 }
-
-
-  

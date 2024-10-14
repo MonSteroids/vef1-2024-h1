@@ -1,8 +1,43 @@
 .wrapper{
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 var(--spacing);
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+@media (width >= 500px) {
+  .wrapper {
+    gap: var(--vertical-space-large);
+  }
+
+  .wrapper .wrapper-content .wrapper-cards{
+    display: grid;
+    gap: var(--gutter);
+  }
+}
+
+
+@media (width >= 900px) {
+  .wrapper {
+    gap: var(--vertical-space-large);
+  }
+
+  .wrapper .wrapper-content .wrapper-cards{
+    display: grid;
+    gap: var(--gutter);
+  }
 }
 
 .wrapper-newsletter {
@@ -10,6 +45,11 @@
   max-width: none;
   margin-right: 0;
   margin-left: 0;
+}
+
+
+.wrapper-header {
+  width: 100%
 }
 
 
