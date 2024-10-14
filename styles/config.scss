@@ -28,9 +28,17 @@
     --columns: 12;
     --gutter: 30px;
     --offset: 20px;
+
+    /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+    --vertical-space:calc(($gutter) * 1);
+    --vertical-space-large:calc(($gutter) * 1.5);
   
     /* Breidd á efni með offset */
     --width-offset: calc(100% - (2 * var(--offset)));
+
+    /* Menu */
+    --menu-icon-width: 20px;
+    --menu-icon-height: 13px;
   
     /** Litir með nafni **/
     --color-yellow: #E3CDB1;
@@ -39,15 +47,25 @@
     --color-gray-light: #e7e7e7;
     --color-gray: #9b9b9b;
     --color-gray-lighter: #d6d6d6;
+    --color-dark-gray:#9B9B9B;
+    --color-off-white:#fafafa;
+    --color-beige:#f7f1eb;
+    --color-brown:#e3cdb1;
 
   
     /** Litir með notkun **/
     --color-background-primary: var(--color-gray-light);
+    --color-background-off-white:($color-off-white);
     --color-background-card: var(--color-white);
     --color-yellow-font: var(--color-yellow);
     --color-gray-font: var(--color-gray);
     --color-newletter-background: var(--color-black);
     --color-footer-bottom-text: var(--color-gray-lighter);
+    --color-brown-text: ($color-brown);
+    --color-background-announcement: ($color-beige);
+    --color-light-gray-text: ($color-light-gray);
+    --color-dark-gray-text: ($color-dark-gray);
+    --color-darker-gray-text: ($color-darker-gray);
 
   
     /* Letur stillingar */

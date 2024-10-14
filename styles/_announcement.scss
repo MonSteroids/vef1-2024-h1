@@ -1,5 +1,5 @@
 .announcement-section {
-    background-color: $color-background-announcement;
+    background-color: var(--color-background-announcement);
     position: relative;
     padding: 20px;
 
@@ -14,8 +14,8 @@
     }
 
     .announcement-text {
-        font-size: $font-base-size;
-        color: $color-darker-gray-text;
+        font-size: var(--font-base-size);
+        color: var(--color-darker-gray-text);
         line-height: 24px;
         text-align: center;
     }
@@ -26,13 +26,13 @@
         .button {
             width: 191px;
             height: 42px;
-            color: $color-brown-text;
-            border-color: $color-brown-text;
-            background-color: $color-background-announcement;
+            color: var(--color-brown-text);
+            border-color: var(--color-brown-text);
+            background-color: var(--color-background-announcement);
 
             &:hover {
-                background-color: $color-brown;
-                color: $color-white;
+                background-color: vra(--color-brown);
+                color: var(--color-white);
             }
         }
     }
@@ -43,13 +43,13 @@
         .button {
             width: 191px;
             height: 42px;
-            color: $color-brown-text;
-            border-color: $color-brown-text;
-            background-color: $color-background-announcement;
+            color: var(--color-brown-text);
+            border-color: var(--color-brown-text);
+            background-color: var(--color-background-announcement);
 
             &:hover {
-                background-color: $color-brown;
-                color: $color-white;
+                background-color: var(--color-brown);
+                color: var(--color-white);
             }
         }
     }
@@ -62,7 +62,7 @@
             position: relative;
             text-align: center;
             display: block;
-            margin-top: calc($spacing * 5);
+            margin-top: calc(var(--spacing) * 5);
             margin-bottom: -140px;
             
             img {
@@ -80,7 +80,7 @@
                 background-color: rgba(0, 0, 0, 0.2);
                 filter: blur(10px);
                 z-index: 0;
-                border-radius: $border-radius-regular;
+                border-radius: var(--border-radius-regular);
             }
         }
     }
@@ -91,14 +91,14 @@
         .announcement-time {
             display: block;
             text-align: left;
-            color: $color-brown-text;
+            color: var(--color-brown-text);
             margin-bottom: 0;
         }
         
 
         .book-out {
             text-align: left;
-            margin-bottom: $spacing;
+            margin-bottom: var(--spacing);
             font-size: 40px;
             h2 {
                 margin: 0;
@@ -112,7 +112,7 @@
 
             .announcement-left {
 
-                margin: calc($spacing * 4);
+                margin: calc(var(--spacing) * 4);
             }
         }
 
