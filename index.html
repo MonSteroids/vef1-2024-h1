@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="is">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
     <title>Kokkasíða?</title>
   </head>
   <body>
@@ -47,17 +51,20 @@
 
             <div class="cards">
               <div class="content">
-                <p>Get ready to get busy</p>
-                <!-- "latest recipes" er í öðrum lit -->
-                <h2>Check out our latest recipes</h2>
+                <div class="content-title">
+                  <p>Get ready to get busy</p>
+                  <!-- "latest recipes" er í öðrum lit -->
+                  <h2>
+                    <span class="part1">Check out our</span>
+                    <span class="part2">latest recipes</span>
+                  </h2>
+                </div>
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">1</h3>
+                    <img src="../myndir/lax-sushi-roll.png" alt="lax salad on plate viewed from above">
                     <div class="text">
                       <p>September</p>
-                      <p>Lax sushi rolls</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Lax sushi rolls</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
@@ -65,12 +72,10 @@
 
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">2</h3>
+                    <img src="../myndir/milk-cookies.png" alt="A milk cookie on a plate viewed from above with white jug to the side">
                     <div class="text">
                       <p>September</p>
-                      <p>Milk cookies</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Milk cookies</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
@@ -78,12 +83,10 @@
 
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">3</h3>
+                    <img src="../myndir/banana-cake.png" alt="various ingredients neatly organized viewed from above">
                     <div class="text">
                       <p>September</p>
-                      <p>Banana cake</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Banana cake</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
@@ -91,12 +94,10 @@
 
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">4</h3>
+                    <img src="../myndir/cube-cakes.png" alt="4 cube cakes in different sizes, some stacked">
                     <div class="text">
                       <p>September</p>
-                      <p>Cube cake</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Cube cake</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
@@ -104,12 +105,10 @@
 
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">5</h3>
+                    <img src="../myndir/lax-sushi-roll.png" alt="lax salad on plate viewed from above">
                     <div class="text">
                       <p>September</p>
-                      <p>Lax sushi rolls</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Lax sushi rolls</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
@@ -117,22 +116,21 @@
 
                 <section class="card">
                   <div class="content">
-                    <h3 class="title">6</h3>
+                    <img src="../myndir/almond-cookies.png" alt="three almond cookies on a plate viewed from above with flowers">
                     <div class="text">
                       <p>September</p>
-                      <p>Almond cookies</p>
-                    </div>
-                    <div class="actions">
+                      <p class="special-text">Almond cookies</p>
                       <a href="./sidur/spil.html" class="button">Read more</a>
                     </div>
                   </div>
                 </section>
+                <form method="post" action=".">
+                  <input type="hidden" name="id" value="1" />
+                  <button class="button">See more</button>
+                </form>
               </div>
             </div>
-            <form method="post" action=".">
-              <input type="hidden" name="id" value="1" />
-              <button class="button">See more</button>
-            </form>
+            
           </div>
         </div>
 
@@ -237,61 +235,66 @@
 
         <p>Template setning til að sýna aðskilnað sectiona</p>
 
-        <!-- Newsletter section á figma byrjar -->
-      <div class="newsletter"></div>
-        <section>
-          <h2>Craving more?</h2>
-          <h1>Subscribe to our newsletter</h1>
-          <form method="post" action=".">
-            <input type="hidden" name="id" value="1" />
-            <button class="button">Subscribe now</button>
-            <fieldset class="card">
-              <legend class="title">Email</legend>
-              <div class="content">
-                <div>
-                  <label for="email">Netfang</label>
-                  <input id="email" name="email" type="email" required placeholder="nafn@example.org">
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </section>
-      </div>
-
-        <!-- Newsletter section á figma endar -->
-
-        <p>Template setning til að sýna aðskilnað sectiona</p>
-
-        <!-- Footer section á figma byrjar -->
-
-      <footer>
-        <div class="content">
-          
-          <section>
-            <h2>Come and join us for more recipes</h2>
-            <!-- <form method="post" action=".">
-              <input type="hidden" name="id" value="1" />
-              <button class="button">Setja í körfu</button>
-            </form> -->
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/HaskoliIslands/">Facebook</a>
-              </li>
-              <li><a href="https://www.youtube.com/user/HIvarp">Twitter</a></li>
-              <li>
-                <a href="https://www.instagram.com/haskoli_islands/"
-                  >YouTube</a
-                >
-              </li>
-            </ul>
-            <p>yumyum.com</p>
-          </section>
-        </div>
-      </footer>
-
-      <!-- Footer section á figma endar -->
-
+     
     </div>
+    </div>
+  </div>
+ 
+    <div class="wrapper-newsletter">
+    <div class="newsletter">
+    <section class="content">
+      <section>
+      <p>All the news are here</p>
+      <h2>Subscribe to our newsletter</h2>
+    </section>
+    <section>
+      <form method="post" action=".">
+        <input type="hidden" name="id" value="1" />
+          <legend class="title">Email</legend>
+          <div class="content">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="nafn@example.org">
+            </div>
+          </div>
+      </form>
+    </section>
+    <section>
+      <button class="button">Subscribe now</button>
+      </section>
+    </section>
+    </div>
+  </div>
+
+    <footer>
+  <div class="content">
+    <p>Come and join us for more recipes</p>
+    <div class="social-icons">
+      <div class="circle">
+        <a href="https://www.facebook.com/HaskoliIslands/" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <div class="circle">
+        <a href="https://www.youtube.com/user/HIvarp" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="circle">
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <p class="bottom-text">yumyum.com</p>
+  </div>
+</footer>
+
+  
+ 
+ 
+
+  <!-- Footer section á figma endar -->
     <script>
       //Script fyrir hamburger icon
       document.addEventListener("DOMContentLoaded", function() {
