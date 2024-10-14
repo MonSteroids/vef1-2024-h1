@@ -23,8 +23,14 @@
   --columns: 12;
   --gutter: 30px;
   --offset: 20px;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space:calc(($gutter) * 1);
+  --vertical-space-large:calc(($gutter) * 1.5);
   /* Breidd á efni með offset */
   --width-offset: calc(100% - (2 * var(--offset)));
+  /* Menu */
+  --menu-icon-width: 20px;
+  --menu-icon-height: 13px;
   /** Litir með nafni **/
   --color-yellow: #E3CDB1;
   --color-white: #fff;
@@ -32,13 +38,23 @@
   --color-gray-light: #e7e7e7;
   --color-gray: #9b9b9b;
   --color-gray-lighter: #d6d6d6;
+  --color-dark-gray:#9B9B9B;
+  --color-off-white:#fafafa;
+  --color-beige:#f7f1eb;
+  --color-brown:#e3cdb1;
   /** Litir með notkun **/
   --color-background-primary: var(--color-gray-light);
+  --color-background-off-white:($color-off-white);
   --color-background-card: var(--color-white);
   --color-yellow-font: var(--color-yellow);
   --color-gray-font: var(--color-gray);
   --color-newletter-background: var(--color-black);
   --color-footer-bottom-text: var(--color-gray-lighter);
+  --color-brown-text: ($color-brown);
+  --color-background-announcement: ($color-beige);
+  --color-light-gray-text: ($color-light-gray);
+  --color-dark-gray-text: ($color-dark-gray);
+  --color-darker-gray-text: ($color-darker-gray);
   /* Letur stillingar */
   --font-base-size: 1rem;
   --font-small-size: 12px;
@@ -113,6 +129,149 @@ footer .circle i {
 }
 
 /*@import 'styles/nav';*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-background-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+.navbar__logo img {
+  min-height: 16.92px;
+  max-height: 90px;
+}
+.navbar__menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 13px;
+  transition: all 0.3s var(--transition-timing-function);
+}
+.navbar__menu-toggle span {
+  background-color: #000;
+  height: 1px;
+  width: 100%;
+  display: block;
+  transition: all 0.3s var(--transition-timing-function);
+}
+.navbar__menu-toggle.is-open span {
+  position: absolute;
+  width: 20px;
+}
+.navbar__menu-toggle.is-open span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.navbar__menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__menu-toggle.is-open span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.navbar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.navbar__menu li {
+  margin: 0;
+  background-color: var(--color-background-off-white);
+  flex-grow: 1;
+  text-align: center;
+}
+.navbar__menu li a {
+  color: #000;
+  font-size: 60px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: var(--spacing);
+  display: block;
+}
+@media (min-width: 700px) {
+  .navbar {
+    margin-top: var(--spacing);
+    padding-left: 155px;
+    padding-right: 155px;
+  }
+  .navbar__logo img {
+    width: 133px;
+    height: 25px;
+  }
+  .navbar__menu-toggle {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar__menu li {
+    margin: 10px;
+    background-color: var(--color-background-primary);
+  }
+  .navbar__menu li a {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+  }
+  .navbar__menu li:nth-child(1) {
+    display: none;
+  }
+}
+
+.menu-open .navbar__menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--color-background-primary);
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    margin-top: 1rem;
+    padding-left: 155px;
+    padding-right: 155px;
+  }
+  .navbar__logo img {
+    width: 133px;
+    height: 25px;
+  }
+  .navbar__menu-toggle {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar__menu li {
+    margin: 10px;
+    background-color: #ffffff;
+  }
+  .navbar__menu li a {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+  }
+  .navbar__menu li:nth-child(1) {
+    display: none;
+  }
+}
 /* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
 * {
   margin: 0;
@@ -151,7 +310,32 @@ html {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Playfair-Display";
+  font-weight: 700;
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Playfair-Display";
+  font-weight: 800;
+  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("woff2");
+}
+/*** Allt meginmál notar poppins ***/
+html,
+input,
+select,
+button {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/*** Allar fyrirsagnir nota Playfair-Display ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: "Playfair-Display", "Comic Sans MS", cursive;
 }
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
@@ -473,5 +657,136 @@ footer .circle i {
 .cards > .content p {
   color: var(--color-yellow);
 }
+
+.announcement-section {
+  background-color: var(--color-background-announcement);
+  position: relative;
+  padding: 20px;
+}
+.announcement-section .announcement-time {
+  display: none;
+}
+.announcement-section .book-out {
+  font-weight: 700px;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.announcement-section .announcement-text {
+  font-size: var(--font-base-size);
+  color: var(--color-darker-gray-text);
+  line-height: 24px;
+  text-align: center;
+}
+.announcement-section .go-to-store-button {
+  text-align: center;
+}
+.announcement-section .go-to-store-button .button {
+  width: 191px;
+  height: 42px;
+  color: var(--color-brown-text);
+  border-color: var(--color-brown-text);
+  background-color: var(--color-background-announcement);
+}
+.announcement-section .go-to-store-button .button:hover {
+  background-color: vra(--color-brown);
+  color: var(--color-white);
+}
+.announcement-section .see-more-button {
+  text-align: center;
+  display: none;
+}
+.announcement-section .see-more-button .button {
+  width: 191px;
+  height: 42px;
+  color: var(--color-brown-text);
+  border-color: var(--color-brown-text);
+  background-color: var(--color-background-announcement);
+}
+.announcement-section .see-more-button .button:hover {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+.announcement-section .announcement-right {
+  position: relative;
+  display: inline-block;
+}
+.announcement-section .announcement-right .yam-image {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-top: calc(var(--spacing) * 5);
+  margin-bottom: -140px;
+}
+.announcement-section .announcement-right .yam-image img {
+  width: 205px;
+  position: relative;
+  z-index: 1;
+}
+.announcement-section .announcement-right .yam-image .shadow {
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: blur(10px);
+  z-index: 0;
+  border-radius: var(--border-radius-regular);
+}
+@media (min-width: 700px) {
+  .announcement-section .announcement-time {
+    display: block;
+    text-align: left;
+    color: var(--color-brown-text);
+    margin-bottom: 0;
+  }
+  .announcement-section .book-out {
+    text-align: left;
+    margin-bottom: var(--spacing);
+    font-size: 40px;
+  }
+  .announcement-section .book-out h2 {
+    margin: 0;
+  }
+  .announcement-section .announcement-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .announcement-section .announcement-wrapper .announcement-left {
+    margin: calc(var(--spacing) * 4);
+  }
+  .announcement-section .announcement-text {
+    line-height: normal;
+    padding: 0;
+  }
+  .announcement-section .go-to-store-button {
+    display: none;
+  }
+  .announcement-section .go-to-store-button .button {
+    display: none;
+  }
+  .announcement-section .see-more-button {
+    text-align: left;
+    display: block;
+  }
+  .announcement-section .announcement-right .yam-image img {
+    width: 440px;
+  }
+}
+
+/* Stillingar */
+/* Grunn bilið okkar er 1rem == 16px */
+/* Grid stillingar */
+/* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+/* Hámarks og lágmarks breidd á efni */
+/* Border breiddir */
+/* Menu */
+/* Litir */
+/** Litir með nafni **/
+/** Litir með notkun **/
+/* Letur stillingar */
+/* Transitions */
 
 /*# sourceMappingURL=styles.css.map */

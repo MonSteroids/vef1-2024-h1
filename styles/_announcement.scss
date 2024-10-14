@@ -1,0 +1,145 @@
+.announcement-section {
+    background-color: var(--color-background-announcement);
+    position: relative;
+    padding: 20px;
+
+    .announcement-time {
+        display: none;
+    }
+    .book-out {
+        font-weight: 700px;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+
+    .announcement-text {
+        font-size: var(--font-base-size);
+        color: var(--color-darker-gray-text);
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .go-to-store-button {
+        text-align: center;
+
+        .button {
+            width: 191px;
+            height: 42px;
+            color: var(--color-brown-text);
+            border-color: var(--color-brown-text);
+            background-color: var(--color-background-announcement);
+
+            &:hover {
+                background-color: vra(--color-brown);
+                color: var(--color-white);
+            }
+        }
+    }
+    .see-more-button {
+        text-align: center;
+        display: none;
+
+        .button {
+            width: 191px;
+            height: 42px;
+            color: var(--color-brown-text);
+            border-color: var(--color-brown-text);
+            background-color: var(--color-background-announcement);
+
+            &:hover {
+                background-color: var(--color-brown);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .announcement-right {
+        position: relative;
+        display: inline-block;
+
+        .yam-image {
+            position: relative;
+            text-align: center;
+            display: block;
+            margin-top: calc(var(--spacing) * 5);
+            margin-bottom: -140px;
+            
+            img {
+                width: 205px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .shadow {
+                position: absolute;
+                left: -15px;
+                top: 15px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                filter: blur(10px);
+                z-index: 0;
+                border-radius: var(--border-radius-regular);
+            }
+        }
+    }
+
+    @media(min-width: 700px) {
+
+
+        .announcement-time {
+            display: block;
+            text-align: left;
+            color: var(--color-brown-text);
+            margin-bottom: 0;
+        }
+        
+
+        .book-out {
+            text-align: left;
+            margin-bottom: var(--spacing);
+            font-size: 40px;
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .announcement-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .announcement-left {
+
+                margin: calc(var(--spacing) * 4);
+            }
+        }
+
+        .announcement-text {
+            line-height: normal;
+            padding: 0;
+        }
+
+        .go-to-store-button {
+            display: none;
+            .button {
+                display: none;
+            }
+        }
+
+        .see-more-button {
+            text-align: left;
+            display: block;
+        }
+
+        .announcement-right {
+            .yam-image {
+                img {
+                    width: 440px;
+                }
+            }
+        }
+        
+    }
+}
