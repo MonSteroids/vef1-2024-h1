@@ -279,17 +279,50 @@ header {
 }
 
 .wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 var(--spacing);
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
 }
 
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+@media (width >= 500px) {
+  .wrapper {
+    gap: var(--vertical-space-large);
+  }
+  .wrapper .wrapper-content .wrapper-cards {
+    display: grid;
+    gap: var(--gutter);
+  }
+}
+@media (width >= 900px) {
+  .wrapper {
+    gap: var(--vertical-space-large);
+  }
+  .wrapper .wrapper-content .wrapper-cards {
+    display: grid;
+    gap: var(--gutter);
+  }
+}
 .wrapper-newsletter {
   width: 100%;
   max-width: none;
   margin-right: 0;
   margin-left: 0;
+}
+
+.wrapper-header {
+  width: 100%;
 }
 
 /** Letur og stærðir **/
@@ -310,32 +343,7 @@ html {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("woff2");
-}
-@font-face {
-  font-family: "Playfair-Display";
-  font-weight: 700;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("woff2");
-}
-@font-face {
-  font-family: "Playfair-Display";
-  font-weight: 800;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("woff2");
-}
-/*** Allt meginmál notar poppins ***/
-html,
-input,
-select,
-button {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
-/*** Allar fyrirsagnir nota Playfair-Display ***/
-h1,
-h2,
-h3,
-legend {
-  font-family: "Playfair-Display", "Comic Sans MS", cursive;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
 }
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
@@ -347,6 +355,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-background-primary);
 }
 
 /* og látum erfast á allt */
@@ -401,7 +410,7 @@ button {
   border: var(--border-regular);
   padding: var(--spacing);
   width: var(--button-width);
-  background-color: var(--color-background-card);
+  background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
 }
@@ -565,8 +574,9 @@ footer .circle i {
   display: flex;
   width: 100%;
   flex-direction: column;
-  width: calc(33.3333333333% - var(--spacing));
+  /*width: calc(100%/3 - var(--spacing));*/
   background-color: var(--color-background-card);
+  margin-bottom: var(--spacing);
 }
 
 .card img {
@@ -575,8 +585,8 @@ footer .circle i {
 
 .card > .content img {
   display: block;
-  border-top-left-radius: var(--border-radius-regular);
-  border-top-right-radius: var(--border-radius-regular);
+  /*border-top-left-radius: var(--border-radius-regular);
+  border-top-right-radius: var(--border-radius-regular);*/
   width: 100%;
   height: 290px;
   object-fit: cover;
@@ -602,38 +612,56 @@ footer .circle i {
     * > .content       <- sem er strax barn af .card
     * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
     */
+/*
 .card:not(:has(> .image)) > .content {
   border: var(--border-regular);
 }
-
+  */
 .card > .content > .text {
-  padding: calc(var(--spacing) / 2);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing);
   color: var(--color-gray);
   flex: 1;
 }
 
-.card > .content > .text > .special-text {
-  font-family: "Playfair_Display";
-  color: var(--color-black);
-  font-size: 22px;
+.card > .content > .text > section {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing);
 }
 
-.card > .content > .text a {
-  display: flex;
+.card > .content > .text > p {
+  font-size: var(--font-small-size);
+  color: var(--color-gray-font);
+}
+
+.card > .content > .text > section > .special-text {
+  font-family: "Playfair_Display";
+  color: var(--color-black);
+  font-size: 18px;
+}
+
+.card > .content > .text > section > a {
   color: var(--color-yellow);
-  justify-content: end;
-  padding: 0;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 /** Cards **/
 .cards {
+  display: block;
+  width: 100%;
+  color: var(--color-gray);
+  /*
   display: grid;
-  border: var(--border-regular);
   grid-template-columns: auto;
   grid-template-rows: 3fr;
-  gap: var(--vertical-space);
+  gap: var(--vertical-space); 
   justify-items: center;
-  width: 100%;
+  width: 100%; */
 }
 
 .cards > .title {
@@ -649,15 +677,58 @@ footer .circle i {
   width: 100%;
 }
 
+.cards > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards > .content-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
+}
+
 /* Litur fyrir "Check out our" */
-.cards > .content > .content-title > h2 > .part1 {
+.cards > .content-title > h2 > .part1 {
   color: var(--color-gray);
 }
 
-.cards > .content p {
-  color: var(--color-yellow);
+.cards > .content-title > h2 > .part2 {
+  color: var(--color-black);
 }
 
+.cards p {
+  color: var(--color-yellow);
+  font-size: var(--font-small-size);
+}
+
+@media (width >= 500px) {
+  .cards > .content-title {
+    align-items: start;
+    font-size: 20px;
+  }
+  .cards > .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+    width: auto;
+  }
+}
+@media (width >= 900px) {
+  .cards > .content-title {
+    align-items: start;
+  }
+  .cards > .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: var(--gutter);
+    width: auto;
+  }
+}
 .announcement-section {
   background-color: var(--color-background-announcement);
   position: relative;
