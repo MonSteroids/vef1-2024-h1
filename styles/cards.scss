@@ -1,13 +1,16 @@
 /** Cards **/
 
 .cards {
+    display: block;
+    width: 100%;
+    color: var(--color-gray);
+    /*
     display: grid;
-    border: var(--border-regular);
     grid-template-columns: auto;
     grid-template-rows: 3fr;
     gap: var(--vertical-space); 
     justify-items: center;
-    width: 100%; 
+    width: 100%; */
 }
   
 .cards > .title {
@@ -23,11 +26,62 @@
     width: 100%;
 }
 
+.cards > form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cards > .content-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing);
+    margin-top: var(--spacing);
+
+}
+
 /* Litur fyrir "Check out our" */
-.cards > .content > .content-title > h2 > .part1 {
+.cards > .content-title > h2 > .part1 {
     color: var(--color-gray);
 }
 
-.cards > .content p {
+.cards > .content-title > h2 > .part2 {
+    color: var(--color-black);
+}
+
+.cards  p {
     color: var(--color-yellow);
+    font-size: var(--font-small-size);
+}
+
+
+@media (width >= 500px) {
+    .cards > .content-title {
+        align-items: start;
+        font-size: 20px;
+    }
+
+
+    .cards > .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gutter);
+        width: auto;
+    }
+}
+
+@media (width >= 900px) {
+    .cards > .content-title {
+        align-items: start;
+    }
+
+    .cards > .content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+        gap: var(--gutter);
+        width:auto;
+    }
 }
