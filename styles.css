@@ -43,8 +43,8 @@
   --color-beige:#f7f1eb;
   --color-brown:#e3cdb1;
   /** Litir með notkun **/
-  --color-background-primary: var(--color-gray-light);
-  --color-background-off-white:($color-off-white);
+  --color-background-primary: var(--color-white);
+  --color-background-off-white:var(--color-off-white);
   --color-background-card: var(--color-white);
   --color-yellow-font: var(--color-yellow);
   --color-gray-font: var(--color-gray);
@@ -128,11 +128,11 @@ footer .circle i {
   color: var(--color-footer-bottom-text);
 }
 
-/*@import 'styles/nav';*/
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .navbar {
@@ -854,6 +854,9 @@ footer .circle i {
   }
   .announcement-section .announcement-right .yam-image img {
     width: 440px;
+  }
+  .announcement-section .announcement-right .yam-image .shadow {
+    max-width: 440px;
   }
 }
 
