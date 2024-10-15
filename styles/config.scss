@@ -54,8 +54,8 @@
 
   
     /** Litir með notkun **/
-    --color-background-primary: var(--color-gray-light);
-    --color-background-off-white:($color-off-white);
+    --color-background-primary: var(--color-white);
+    --color-background-off-white:var(--color-off-white);
     --color-background-card: var(--color-white);
     --color-yellow-font: var(--color-yellow);
     --color-gray-font: var(--color-gray);
