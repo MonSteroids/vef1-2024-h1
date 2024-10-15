@@ -50,11 +50,11 @@
   --color-gray-font: var(--color-gray);
   --color-newletter-background: var(--color-black);
   --color-footer-bottom-text: var(--color-gray-lighter);
-  --color-brown-text: ($color-brown);
-  --color-background-announcement: ($color-beige);
-  --color-light-gray-text: ($color-light-gray);
-  --color-dark-gray-text: ($color-dark-gray);
-  --color-darker-gray-text: ($color-darker-gray);
+  --color-brown-text: var(--color-brown);
+  --color-background-announcement: var(--color-beige);
+  --color-light-gray-text: var(--color-light-gray);
+  --color-dark-gray-text: var(--color-dark-gray);
+  --color-darker-gray-text: var(--color-darker-gray);
   /* Letur stillingar */
   --font-base-size: 1rem;
   --font-small-size: 12px;
@@ -138,7 +138,7 @@ header {
 .navbar {
   width: 100%;
   height: 60px;
-  background-color: var(--color-background-primary);
+  background-color: var(--color-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,8 +146,8 @@ header {
   padding-right: var(--spacing);
 }
 .navbar__logo img {
-  min-height: 16.92px;
-  max-height: 90px;
+  height: 16.92px;
+  width: 90px;
 }
 .navbar__menu-toggle {
   cursor: pointer;
@@ -200,7 +200,7 @@ header {
   padding: var(--spacing);
   display: block;
 }
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .navbar {
     margin-top: var(--spacing);
     padding-left: 155px;
@@ -209,6 +209,7 @@ header {
   .navbar__logo img {
     width: 133px;
     height: 25px;
+    min-height: 25px;
   }
   .navbar__menu-toggle {
     display: none;
@@ -242,7 +243,7 @@ header {
   text-align: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .navbar {
     margin-top: 1rem;
     padding-left: 155px;
@@ -310,32 +311,7 @@ html {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("woff2");
-}
-@font-face {
-  font-family: "Playfair-Display";
-  font-weight: 700;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format("woff2");
-}
-@font-face {
-  font-family: "Playfair-Display";
-  font-weight: 800;
-  src: url("./fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf") format("woff2");
-}
-/*** Allt meginmál notar poppins ***/
-html,
-input,
-select,
-button {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
-/*** Allar fyrirsagnir nota Playfair-Display ***/
-h1,
-h2,
-h3,
-legend {
-  font-family: "Playfair-Display", "Comic Sans MS", cursive;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
 }
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
@@ -682,6 +658,9 @@ footer .circle i {
   text-align: center;
 }
 .announcement-section .go-to-store-button .button {
+  padding: 0;
+  margin: 0;
+  margin-top: var(--spacing);
   width: 191px;
   height: 42px;
   color: var(--color-brown-text);
@@ -689,7 +668,7 @@ footer .circle i {
   background-color: var(--color-background-announcement);
 }
 .announcement-section .go-to-store-button .button:hover {
-  background-color: vra(--color-brown);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 .announcement-section .see-more-button {
@@ -697,6 +676,9 @@ footer .circle i {
   display: none;
 }
 .announcement-section .see-more-button .button {
+  padding: 0;
+  margin: 0;
+  margin-top: var(--spacing);
   width: 191px;
   height: 42px;
   color: var(--color-brown-text);
@@ -709,12 +691,13 @@ footer .circle i {
 }
 .announcement-section .announcement-right {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 .announcement-section .announcement-right .yam-image {
   position: relative;
   text-align: center;
   display: block;
+  margin: 0 auto;
   margin-top: calc(var(--spacing) * 5);
   margin-bottom: -140px;
 }
@@ -725,8 +708,10 @@ footer .circle i {
 }
 .announcement-section .announcement-right .yam-image .shadow {
   position: absolute;
-  left: -15px;
+  left: 47%;
   top: 15px;
+  max-width: 205px;
+  transform: translateX(-50%);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -775,18 +760,5 @@ footer .circle i {
     width: 440px;
   }
 }
-
-/* Stillingar */
-/* Grunn bilið okkar er 1rem == 16px */
-/* Grid stillingar */
-/* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-/* Hámarks og lágmarks breidd á efni */
-/* Border breiddir */
-/* Menu */
-/* Litir */
-/** Litir með nafni **/
-/** Litir með notkun **/
-/* Letur stillingar */
-/* Transitions */
 
 /*# sourceMappingURL=styles.css.map */
