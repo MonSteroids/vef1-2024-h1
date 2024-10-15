@@ -61,11 +61,11 @@
     --color-gray-font: var(--color-gray);
     --color-newletter-background: var(--color-black);
     --color-footer-bottom-text: var(--color-gray-lighter);
-    --color-brown-text: ($color-brown);
-    --color-background-announcement: ($color-beige);
-    --color-light-gray-text: ($color-light-gray);
-    --color-dark-gray-text: ($color-dark-gray);
-    --color-darker-gray-text: ($color-darker-gray);
+    --color-brown-text: var(--color-brown);
+    --color-background-announcement: var(--color-beige);
+    --color-light-gray-text: var(--color-light-gray);
+    --color-dark-gray-text: var(--color-dark-gray);
+    --color-darker-gray-text: var(--color-darker-gray);
 
   
     /* Letur stillingar */
