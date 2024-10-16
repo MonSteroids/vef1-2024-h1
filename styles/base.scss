@@ -30,10 +30,6 @@ body {
   }
 
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
-img {
-    max-width: 100%;
-}
-
 /** Litur á hlekkjum erfist frá foreldri **/
 a {
     color: inherit;
@@ -68,6 +64,11 @@ button {
   background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
+  
+  &:hover {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
 }
 
 label {
