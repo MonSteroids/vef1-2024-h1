@@ -326,6 +326,10 @@ header {
   width: 100%;
 }
 
+.spacing-div {
+  margin-top: calc(var(--spacing) * 13);
+}
+
 /** Letur og stærðir **/
 /*** Grunnstærð er 16px ***/
 html {
@@ -378,10 +382,6 @@ body {
 }
 
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
-img {
-  max-width: 100%;
-}
-
 /** Litur á hlekkjum erfist frá foreldri **/
 a {
   color: inherit;
@@ -414,6 +414,10 @@ button {
   background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
+}
+button:hover {
+  background-color: var(--color-brown);
+  color: var(--color-white);
 }
 
 label {
@@ -857,6 +861,105 @@ footer .circle i {
   }
   .announcement-section .announcement-right .yam-image .shadow {
     max-width: 440px;
+  }
+}
+
+.intro {
+  background-color: var(--color-background-off-white);
+  position: relative;
+  width: 100%;
+}
+.intro .pumpkin-img {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  overflow: hidden;
+}
+.intro .pumpkin-img img {
+  width: 622.28px;
+  height: 935.2px;
+  object-fit: cover;
+  object-position: center;
+  transform: translateY(-40px);
+  z-index: 1;
+}
+.intro .pumpkin-img .shadow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-25%, -24%);
+  width: 550px;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: blur(20px);
+  z-index: 0;
+  border-radius: 50%;
+}
+.intro .pumpkin-text-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-brown-text);
+  text-align: center;
+}
+.intro .pumpkin-text-wrapper .pumpkin-text-heading {
+  color: var(--color-black);
+  font-size: 20px;
+  font-weight: 700px;
+}
+.intro .pumpkin-text-wrapper .pumpkin-text-blurb {
+  display: none;
+  color: var(--color-black);
+}
+.intro .pumpkin-text-wrapper .see-more-button {
+  text-align: center;
+}
+.intro .pumpkin-text-wrapper .see-more-button .button {
+  padding: 0;
+  margin: 0;
+  margin-top: var(--spacing);
+  width: 191px;
+  height: 42px;
+  color: var(--color-brown-text);
+  border-color: var(--color-brown-text);
+  background-color: transparent;
+}
+.intro .pumpkin-text-wrapper .see-more-button .button:hover {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+@media (min-width: 700px) {
+  .intro .pumpkin-img img {
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -10%);
+  }
+  .intro .pumpkin-img .shadow {
+    transform: translate(0%, -30%);
+  }
+  .intro .pumpkin-text-wrapper {
+    text-align: left;
+    transform: translate(-100%, -50%);
+  }
+  .intro .pumpkin-text-wrapper .pumpkin-text-heading {
+    padding-bottom: var(--spacing);
+  }
+  .intro .pumpkin-text-wrapper .pumpkin-text-blurb {
+    display: block;
+  }
+  .intro .pumpkin-text-wrapper .see-more-button {
+    text-align: left;
+  }
+}
+@media (min-width: 1000px) {
+  .intro .pumpkin-img img {
+    top: 50%;
+    left: 50%;
+    transform: translate(90%, -10%);
+  }
+  .intro .pumpkin-img .shadow {
+    transform: translate(0%, -32%);
   }
 }
 
