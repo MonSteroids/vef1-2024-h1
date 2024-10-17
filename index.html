@@ -28,28 +28,43 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="pages/recipes.html">Recipes</a></li>
             <li><a href="pages/videos.html">Videos</a></li>
-            <li><a href="index.html">About us</a></li>
+            <li><a href="#about">About us</a></li>
           </ul>
         </nav>
       </header>
       </div>
       <p class="sr-only"><a href="#efni">Beint í efni</a></p>
+      <p class="sr-only"><a href="#about">Beint í efni</a></p>
       <div class="wrapper-content">
         <main id="efni" class="wrapper-main">
           <div class="content">
             <div class="intro">
+              <div class="pumpkin-img">
+              <div class="shadow"></div>
               <img
-                src="kökumynd"
+                src="myndir/pumpkin-pie.png"
                 alt="Mynd af gómsætri Pumpkin Pie á litlum hvítum disk"
-              />
+                />
+              </div>
+            <div class="pumpkin-text-wrapper">
               <p>Our latest recipe</p>
-              <h2>Pumpkin pie</h2>
-              <p>
-                Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
-                The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
-              </p>
+              <div class="pumpkin-text-heading">
+                <h2>Pumpkin pie</h2>
+              </div>
+              <div class="pumpkin-text-blurb">
+                <p>
+                  Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                  The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
+                </p>
+              </div>
+              <div class="see-more-button">
+                <form action=".">
+                  <input type="hidden" name="id" value="1" />
+                  <button class="button">See more</button>
+                </form>
+              </div>
             </div>
-
+            </div>
             <!-- Latest recipe section á figma byrjar -->
             <div class="wrapper-cards">
             <div class="cards">
@@ -190,7 +205,7 @@
           </div>
         </div>
         <!-- Content section á figma endar -->
-
+        <div class ="spacing-div"></div>
 
         <!-- Video section á figma byrjar -->
         <div class="wrapper-content">
@@ -245,7 +260,7 @@
     </div>
   </div>
 
-    <footer>
+    <footer id="about" class="wrapper-main">
   <div class="content">
     <p>Come and join us for more recipes</p>
     <div class="social-icons">
