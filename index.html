@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./grid.css">
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     rel="stylesheet"
@@ -12,56 +13,58 @@
   </head>
   <body>
     <div class="wrapper">
-        <header>
-          <nav class="navbar">
-            <div class="navbar__logo">
-              <img src="myndir/logo-nav.svg" alt="yum yum logo">
-            </div>
-            <div class="navbar__menu-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="navbar__menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="pages/recipes.html">Recipes</a></li>
-              <li><a href="pages/videos.html">Videos</a></li>
-              <li><a href="index.html">About us</a></li>
-            </ul>
-          </nav>
-        </header>
+      <div class="wrapper-header">
+      <header>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <img src="myndir/logo-nav.svg" alt="yum yum logo">
+          </div>
+          <div class="navbar__menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navbar__menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/recipes.html">Recipes</a></li>
+            <li><a href="pages/videos.html">Videos</a></li>
+            <li><a href="#about">About us</a></li>
+          </ul>
+        </nav>
+      </header>
+      </div>
       <p class="sr-only"><a href="#efni">Beint í efni</a></p>
+      <p class="sr-only"><a href="#about">Beint í efni</a></p>
       <div class="wrapper-content">
         <main id="efni" class="wrapper-main">
           <div class="content">
             <div class="intro">
-              <div class ="pumpkin-img">
-                <div class="shadow"></div>
-                <img
-                  src="myndir/pumpkin-pie.png"
-                  alt="Mynd af gómsætri Pumpkin Pie á litlum hvítum disk"
-                  />
+              <div class="pumpkin-img">
+              <div class="shadow"></div>
+              <img
+                src="myndir/pumpkin-pie.png"
+                alt="Mynd af gómsætri Pumpkin Pie á litlum hvítum disk"
+                />
               </div>
-              <div class="pumpkin-text-wrapper">
-                <p>Our latest recipe</p>
-                <div class="pumpkin-text-heading">
-                  <h2>Pumpkin pie</h2>
-                </div>
-                <div class="pumpkin-text-blurb">
-                  <p>
-                    Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
-                    The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
-                  </p>
-                </div>
-                <div class="see-more-button">
-                  <form action=".">
-                    <input type="hidden" name="id" value="1" />
-                    <button class="button">See more</button>
-                  </form>
-                </div>
+            <div class="pumpkin-text-wrapper">
+              <p>Our latest recipe</p>
+              <div class="pumpkin-text-heading">
+                <h2>Pumpkin pie</h2>
+              </div>
+              <div class="pumpkin-text-blurb">
+                <p>
+                  Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                  The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
+                </p>
+              </div>
+              <div class="see-more-button">
+                <form action=".">
+                  <input type="hidden" name="id" value="1" />
+                  <button class="button">See more</button>
+                </form>
               </div>
             </div>
-
+            </div>
             <!-- Latest recipe section á figma byrjar -->
             <div class="wrapper-cards">
             <div class="cards">
@@ -203,6 +206,7 @@
         </div>
         <!-- Content section á figma endar -->
         <div class ="spacing-div"></div>
+
         <!-- Video section á figma byrjar -->
         <div class="wrapper-content">
         <div class="wrapper-cards">
@@ -210,21 +214,26 @@
           <div class="content-title">
             <p>Want some action?</p>
             <h2>
-              <span class="part1">Check out our</span>
+              <span class="part1">Checkout our</span>
               <span class="part2">video recipies</span>
             </h2>
             </div>
             <div class="content">
-        
+           
+
             </div>
+
             <form method="post" action=".">
               <input type="hidden" name="id" value="1" />
               <button class="button">See more</button>
             </form>
+
+     
     </div>
     </div>
   </div>
   </div>
+ 
     <div class="wrapper-newsletter">
     <div class="newsletter">
     <section class="content">
@@ -250,7 +259,8 @@
     </section>
     </div>
   </div>
-<footer>
+
+    <footer id="about" class="wrapper-main">
   <div class="content">
     <p>Come and join us for more recipes</p>
     <div class="social-icons">
@@ -271,12 +281,8 @@
       </div>
     </div>
     <p class="bottom-text">yumyum.com</p>
-    </div>
-  </footer>
-
-  
- 
- 
+  </div>
+</footer>
 
   <!-- Footer section á figma endar -->
     <script>

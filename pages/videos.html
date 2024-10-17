@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css">
-
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
     <title>Kokkasíða?</title>
   </head>
   <body>
@@ -12,7 +15,7 @@
       <header>
         <nav class="navbar">
           <div class="navbar__logo">
-            <img src="../myndir/logo-nav.svg" alt="yum yum logo">
+            <a href="../index.html"><img src="../myndir/logo-nav.svg" alt="yum yum logo"></a>
           </div>
           <div class="navbar__menu-toggle">
             <span></span>
@@ -23,11 +26,12 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="../pages/recipes.html">Recipes</a></li>
             <li><a href="videos.html">Videos</a></li>
-            <li><a href="../index.html">About us</a></li>
+            <li><a href="#about">About us</a></li>
           </ul>
         </nav>
       </header>
       <p class="sr-only"><a href="#efni">Beint í efni</a></p>
+      <p class="sr-only"><a href="#about">Beint í efni</a></p>
       <div class="wrapper-content">
         <main id="efni" class="wrapper-main">
             <div class="content">
@@ -121,8 +125,6 @@
               </div>
             </div>
 
-            <p>Template setning til að sýna aðskilnað sectiona</p>
-
             <!-- Latest recipe section á figma byrjar -->
 
         <div class="cards">
@@ -176,39 +178,37 @@
 
             <!-- Video section á figma endar -->
 
-            <p>Template setning til að sýna aðskilnað sectiona</p>
-
-            <!-- Newsletter section á figma byrjar -->
-            <div class="newsletter">
-                <section>
-                <h2>Craving more?</h2>
-                <h1>Subscribe to our newsletter</h1>
-                <form method="post" action=".">
-                <input type="hidden" name="id" value="1" />
-                <button class="button">Subscribe now</button>
-                <fieldset class="card">
-                    <legend class="title">Email</legend>
-                    <div class="content">
-                        <div>
-                        <label for="email">Netfang</label>
-                        <input id="email" name="email" type="email" required placeholder="nafn@example.org">
-                        </div>
-                    </div>
-                </fieldset>
-                </form>
-                </section>
-            </div>
-
-            <!-- Newsletter section á figma endar -->
-
-            <p>Template setning til að sýna aðskilnað sectiona</p>
-
+          
             <!-- Footer section á figma byrjar -->
 
-            <!-- Footer section á figma endar -->
             </div>
         </div>
       </div>
+      </div>
+    </div>
+    <div class="wrapper-newsletter">
+      <div class="newsletter">
+      <section class="content">
+        <section>
+        <p>All the news are here</p>
+        <h2>Subscribe to our newsletter</h2>
+      </section>
+      <section>
+        <form method="post" action=".">
+          <input type="hidden" name="id" value="1" />
+            <legend class="title">Email</legend>
+            <div class="content">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="nafn@example.org">
+              </div>
+            </div>
+        </form>
+      </section>
+      <section>
+        <button class="button">Subscribe now</button>
+        </section>
+      </section>
       </div>
     </div>
     <footer>
@@ -234,6 +234,7 @@
         <p class="bottom-text">yumyum.com</p>
       </div>
       </footer>
+      <!-- Footer section á figma endar -->
     <script>
       //Script fyrir hamburger icon
       document.addEventListener("DOMContentLoaded", function() {
