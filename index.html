@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./grid.css">
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     rel="stylesheet"
@@ -13,11 +12,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="wrapper-header">
       <header>
         <nav class="navbar">
           <div class="navbar__logo">
-            <img src="myndir/logo-nav.svg" alt="yum yum logo">
+            <a href="index.html"><img src="myndir/logo-nav.svg" alt="yum yum logo"></a>
           </div>
           <div class="navbar__menu-toggle">
             <span></span>
@@ -32,7 +30,6 @@
           </ul>
         </nav>
       </header>
-      </div>
       <p class="sr-only"><a href="#efni">Beint í efni</a></p>
       <p class="sr-only"><a href="#about">Beint í efni</a></p>
       <div class="wrapper-content">
@@ -285,20 +282,6 @@
 </footer>
 
   <!-- Footer section á figma endar -->
-    <script>
-      //Script fyrir hamburger icon
-      document.addEventListener("DOMContentLoaded", function() {
-        const toggleButton = document.querySelector('.navbar__menu-toggle');
-        const navbar = document.querySelector('.navbar');
-        if (toggleButton) {
-          toggleButton.addEventListener('click', function() {
-              navbar.classList.toggle('menu-open');
-              toggleButton.classList.toggle('is-open');
-          });
-         } else {
-          console.error("Hamburger toggle button not found");
-         }
-       });
-    </script>
+  <script src="scripts.js"></script>
   </body>
 </html>
