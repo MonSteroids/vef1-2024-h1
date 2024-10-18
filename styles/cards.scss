@@ -42,6 +42,34 @@
 
 }
 
+/* Sérstakur header fyrir recipes síðu*/
+.cards  >.content-title > .recipes-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.cards > .content-title > .recipes-title label {
+    margin-left: auto;
+    font-size: 22px;
+    font-family: var(--font-family-heading);
+    display: flex;
+    align-items: center;
+}
+
+.cards > .content-title > .recipes-title label input {
+    margin-right: var(--spacing);
+}
+
+.cards > .content-title > .recipes-title h1 {
+    font-size: 60px;
+}
+
+
+
+
 /* Litur fyrir "Check out our" */
 .cards > .content-title > h2 > .part1 {
     color: var(--color-gray);
@@ -55,6 +83,8 @@
     color: var(--color-yellow);
     font-size: var(--font-small-size);
 }
+
+
 
 
 @media (width >= 500px) {
