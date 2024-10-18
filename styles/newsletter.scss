@@ -3,7 +3,7 @@
     display: flex;
     width: 100%;
     background-color: var(--color-newletter-background);
-    margin: 0;
+    margin-top: calc(3*var(--spacing));
     padding: var(--spacing);
     padding-top: calc(3*var(--spacing));
     padding-bottom: calc(3*var(--spacing));
@@ -41,9 +41,15 @@
     margin: 0;
 }
 
-.newsletter button{
+.newsletter button {
     background-color: var(--color-newletter-background);
+
+    &:hover{
+        background-color: var(--color-yellow-font);
+        color: black;
+    }
 }
+
 
 .newsletter form {
     border: none;

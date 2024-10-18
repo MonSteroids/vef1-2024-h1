@@ -1,3 +1,4 @@
+
 footer .content{
     display: flex;
     flex-direction: column;
@@ -30,8 +31,12 @@ footer .social-icons {
     color: var(--color-footer-bottom-text);
     gap: 15px;
     margin-top: calc(1.5*var(--spacing));
-    margin-bottom: calc(1.5*var(--spacing))
-  }
+    margin-bottom: calc(1.5*var(--spacing));
+
+    &:hover {
+      color: var(--color-background-primary);
+    }
+}
   
   footer .circle {
     border: 2px solid var(--color-footer-bottom-text);
@@ -43,7 +48,16 @@ footer .social-icons {
     display: flex;
     justify-content: center;
     align-items: center; 
+    transition: background-color var(--transition-time-short)
+    var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
   }
+  
+
+  footer .circle:hover{
+    background-color: var(--color-footer-bottom-text);
+}
   
   footer .circle a {
     display: flex;
@@ -52,10 +66,20 @@ footer .social-icons {
     width: 100%;
     height: 100%;
     text-decoration: none;
+
+ 
   }
   
   footer .circle i {
     font-size: 18px; /* icon size */
     color: var(--color-footer-bottom-text); 
+  }
+
+  footer .circle:hover i {
+    color: var(--color-background-primary);
+    transition: background-color var(--transition-time-short)
+  var(--transition-timing-function),
+  color var(--transition-time-short) var(--transition-timing-function),
+  border-color var(--transition-time-short) var(--transition-timing-function);
   }
   

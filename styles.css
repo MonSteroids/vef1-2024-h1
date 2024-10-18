@@ -43,7 +43,7 @@
   --color-beige:#f7f1eb;
   --color-brown:#e3cdb1;
   /** Litir með notkun **/
-  --color-background-primary: var(--color-white);
+  --color-background-primary: var(--color-off-white);
   --color-background-off-white:var(--color-off-white);
   --color-background-card: var(--color-white);
   --color-yellow-font: var(--color-yellow);
@@ -102,6 +102,9 @@ footer .social-icons {
   margin-top: calc(1.5 * var(--spacing));
   margin-bottom: calc(1.5 * var(--spacing));
 }
+footer .social-icons:hover {
+  color: var(--color-background-primary);
+}
 
 footer .circle {
   border: 2px solid var(--color-footer-bottom-text);
@@ -112,6 +115,11 @@ footer .circle {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+footer .circle:hover {
+  background-color: var(--color-footer-bottom-text);
 }
 
 footer .circle a {
@@ -126,6 +134,11 @@ footer .circle a {
 footer .circle i {
   font-size: 18px; /* icon size */
   color: var(--color-footer-bottom-text);
+}
+
+footer .circle:hover i {
+  color: var(--color-background-primary);
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
 header {
@@ -414,6 +427,7 @@ button {
   background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
 }
 button:hover {
   background-color: var(--color-brown);
@@ -428,7 +442,7 @@ label {
   display: flex;
   width: 100%;
   background-color: var(--color-newletter-background);
-  margin: 0;
+  margin-top: calc(3 * var(--spacing));
   padding: var(--spacing);
   padding-top: calc(3 * var(--spacing));
   padding-bottom: calc(3 * var(--spacing));
@@ -469,6 +483,10 @@ label {
 
 .newsletter button {
   background-color: var(--color-newletter-background);
+}
+.newsletter button:hover {
+  background-color: var(--color-yellow-font);
+  color: black;
 }
 
 .newsletter form {
@@ -548,6 +566,9 @@ footer .social-icons {
   margin-top: calc(1.5 * var(--spacing));
   margin-bottom: calc(1.5 * var(--spacing));
 }
+footer .social-icons:hover {
+  color: var(--color-background-primary);
+}
 
 footer .circle {
   border: 2px solid var(--color-footer-bottom-text);
@@ -558,6 +579,11 @@ footer .circle {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+footer .circle:hover {
+  background-color: var(--color-footer-bottom-text);
 }
 
 footer .circle a {
@@ -572,6 +598,11 @@ footer .circle a {
 footer .circle i {
   font-size: 18px; /* icon size */
   color: var(--color-footer-bottom-text);
+}
+
+footer .circle:hover i {
+  color: var(--color-background-primary);
+  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
 /** Card **/
@@ -695,6 +726,31 @@ footer .circle i {
   align-items: center;
   margin-bottom: var(--spacing);
   margin-top: var(--spacing);
+}
+
+/* Sérstakur header fyrir recipes síðu*/
+.cards > .content-title > .recipes-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.cards > .content-title > .recipes-title label {
+  margin-left: auto;
+  font-size: 22px;
+  font-family: var(--font-family-heading);
+  display: flex;
+  align-items: center;
+}
+
+.cards > .content-title > .recipes-title label input {
+  margin-right: var(--spacing);
+}
+
+.cards > .content-title > .recipes-title h1 {
+  font-size: 60px;
 }
 
 /* Litur fyrir "Check out our" */

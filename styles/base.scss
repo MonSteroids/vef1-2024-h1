@@ -64,6 +64,11 @@ button {
   background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
+
+  transition: background-color var(--transition-time-short)
+  var(--transition-timing-function),
+  color var(--transition-time-short) var(--transition-timing-function),
+  border-color var(--transition-time-short) var(--transition-timing-function);
   
   &:hover {
     background-color: var(--color-brown);
