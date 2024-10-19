@@ -55,3 +55,18 @@
 .spacing-div {
   margin-top: calc(var(--spacing) * 13);
 }
+
+.want-some-action {
+  display: none;
+
+  @media (min-width: 700px) {
+    display: block;
+  }
+}
+
+.all-the-news {
+  text-align: center;
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
