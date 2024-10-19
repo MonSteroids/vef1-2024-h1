@@ -1,0 +1,36 @@
+.method {
+    display: flex;
+    gap: var(--spacing);
+}
+
+.method-ingredients {
+    width: 50%;
+}
+
+.method-ingredients h2 {
+    color: var(--color-D0-gray);
+    padding-bottom: 20px;
+}
+
+.method-ingredients ul {
+    list-style: none;
+    color: var(--color-dark-gray);
+    padding-bottom: 20px;
+}
+
+.method-ingredients span {
+    margin-right: 20px;
+    font-family: var(--font-family-heading);
+    color: var(--color-brown);
+    font-size: 30px;
+
+}
+
+.method-content h2 {
+    color: var(--color-D0-gray);
+    padding-bottom: 20px;
+}
+
+.method-content p {
+    color: var(--color-5E-gray);
+}
