@@ -36,20 +36,38 @@
       <div class="wrapper-content">
         <main id="efni" class="wrapper-main">
             <div class="content">
-              <!-- Hero section byrjar -->
-              <h2>Pumpkin pie</h2>
-              <p><strong>Easy</strong> recipe</p>
-              <p><strong>6</strong> people</p>
-              <p><strong>1</strong> hour</p>
-              <p>
-                Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
-                The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
-              </p>
-              <img
-                src="../myndir/pumpkin-pie.png"
-                alt="Mynd af gómsætri Pumpkin Pie á litlum hvítum disk"
-              />
-            </div>
+              <div class ="intro">
+                <div class="pumpkin-img">
+                <div class="shadow"></div>
+                <img
+                  src="../myndir/pumpkin-pie.png"
+                  alt="Mynd af gómsætri Pumpkin Pie á litlum hvítum disk"
+                />
+                </div>
+                <div class="hero-text">
+                <h1>Pumpkin pie</h1>
+                <div class="hero-p">
+                  <p>
+                    <img src="/myndir/Level-Icon.svg" alt="Icon of oven mitts">
+                    <strong>Easy</strong> recipe
+                  </p>
+                  <p>
+                    <img src="/myndir/Servings-Icon.svg" alt="Icon of a plate">
+                    <strong>6</strong> people
+                  </p>
+                  <p>
+                    <img src="/myndir/Preparation-Icon.svg" alt="Icon of a knife">
+                    <strong>1</strong> hour
+                  </p>
+                </div>
+                <div class="pumpkin-text-blurb">
+                  <p>
+                    Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                    The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
+                  </p>
+                </div>
+                </div>
+              </div>
               <!-- Hero section endar -->
 
               <div class="method">
@@ -113,19 +131,29 @@
               </div>
 
             <!-- Latest recipe section á figma byrjar -->
-
+        <div class="wrapper-cards">
         <div class="cards">
-            <div class="content">
+              <div class="content-title">
               <p>All the great recipes</p>
               <!-- "video recipes" er í öðrum lit -->
-              <h2>Check out our video recipes</h2>
+              <h2>
+                <span class="part1">Check out our</span>
+                <span class="part2">latest recipes</span>
+              </h2>
+            </div>
+            <div class="content">
+
               <section class="card">
                 <div class="content">
                   <h3 class="title">1</h3>
+                  <img 
+                      src="../myndir/lax-sushi-roll.png" 
+                      alt="lax salad on plate viewed from above"
+                    >
                   <div class="text">
                     <p>September</p>
-                    <p>Lax sushi rolls</p>
-                  </div>
+                    <section>
+                    <p class="special-text">Lax sushi rolls</p>
                   <div class="actions">
                     <a href="recipes.html" class="button">Read more</a>
                   </div>
@@ -135,12 +163,17 @@
               <section class="card">
                 <div class="content">
                   <h3 class="title">2</h3>
+                  <img 
+                    src="../myndir/almond-cookies.png" 
+                    alt="three almond cookies on a plate viewed from above with flowers"
+                  >
                   <div class="text">
                     <p>September</p>
-                    <p>Almond cookies</p>
-                  </div>
-                  <div class="actions">
-                    <a href="recipes.html" class="button">Read more</a>
+                    <section>
+                      <p class="special-text">Almond cookies</p>
+                    <div class="actions">
+                      <a href="recipes.html" class="button">Read more</a>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -148,23 +181,27 @@
               <section class="card">
                 <div class="content">
                   <h3 class="title">3</h3>
+                  <img 
+                      src="../myndir/bluequestpie.png"
+                      alt="Delicious and dry blueberry pie on a blue plate"
+                    >
                   <div class="text">
                     <p>August</p>
-                    <p>Questches pie</p>
-                  </div>
+                    <section>
+                    <p class="special-text">Questches pie</p>
                   <div class="actions">
                     <a href="recipes.html" class="button">Read more</a>
+                  </section>
                   </div>
                 </div>
               </section>
-
+            </div>
             <form method="post" action=".">
               <input type="hidden" name="id" value="1" />
               <button class="button">See more</button>
             </form>
 
             <!-- Video section á figma endar -->
-          </div>
         </div>
         </div>
       </div>
