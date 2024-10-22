@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
   display: grid;
   grid-template-rows: auto;
@@ -22,7 +22,7 @@
     gap: var(--vertical-space-large);
   }
 
-  .wrapper .wrapper-content .wrapper-cards{
+  .wrapper .wrapper-content .wrapper-cards {
     display: grid;
     gap: var(--gutter);
   }
@@ -34,7 +34,7 @@
     gap: var(--vertical-space-large);
   }
 
-  .wrapper .wrapper-content .wrapper-cards{
+  .wrapper .wrapper-content .wrapper-cards {
     display: grid;
     gap: var(--gutter);
   }
@@ -49,7 +49,7 @@
 
 
 .wrapper-header {
-  width: 100%
+  width: 100%;
 }
 
 .spacing-div {
@@ -59,14 +59,15 @@
 .want-some-action {
   display: none;
 
-  @media (min-width: 700px) {
+  @media (width >= 700px) {
     display: block;
   }
 }
 
 .all-the-news {
   text-align: center;
-  @media (min-width: 700px) {
+
+  @media (width >= 700px) {
     display: none;
   }
 }

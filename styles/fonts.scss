@@ -2,21 +2,21 @@
 
 /*** Grunnstærð er 16px ***/
 html {
-    font-size: var(--font-size-base);
+  font-size: var(--font-size-base);
 }
  
 
 /** Leturgerðir **/
 @font-face {
-    font-family: Poppins;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('woff2');
+  font-family: Poppins;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('woff2');
 }
 
 
 @font-face {
-  font-family: Playfair_Display;
+  font-family: "Playfair_Display";
   font-style: normal;
   font-weight: 700;
   font-display: swap;

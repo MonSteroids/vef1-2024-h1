@@ -1,158 +1,159 @@
 .announcement-section {
-    background-color: var(--color-background-announcement);
-    position: relative;
-    width: 100%;
+  background-color: var(--color-background-announcement);
+  position: relative;
+  width: 100%;
 
-    .announcement-time {
-        display: none;
+  .announcement-time {
+    display: none;
+  }
+
+  .book-out {
+    font-weight: 700px;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  .announcement-text {
+    font-size: var(--font-base-size);
+    color: var(--color-darker-gray-text);
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .go-to-store-button {
+    text-align: center;
+
+    .button {
+      padding: 0;
+      margin: 0;
+      margin-top: var(--spacing);
+      width: 191px;
+      height: 42px;
+      color: var(--color-brown-text);
+      border-color: var(--color-brown-text);
+      background-color: var(--color-background-announcement);
+
+      &:hover {
+        background-color: var(--color-brown);
+        color: var(--color-white);
+      }
     }
+  }
+
+  .see-more-button {
+    text-align: center;
+    display: none;
+
+    .button {
+      padding: 0;
+      margin: 0;
+      margin-top: var(--spacing);
+      width: 191px;
+      height: 42px;
+      color: var(--color-brown-text);
+      border-color: var(--color-brown-text);
+      background-color: var(--color-background-announcement);
+
+      &:hover {
+        background-color: var(--color-brown);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .announcement-right {
+    position: relative;
+    display: block;
+
+    .yam-image {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      margin-top: calc(var(--spacing) * 5);
+      margin-bottom: -140px;
+            
+      img {
+        width: 205px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .shadow {
+        position: absolute;
+        left: 47%;
+        top: 15px;
+        max-width: 205px;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 20%);
+        filter: blur(10px);
+        z-index: 0;
+        border-radius: var(--border-radius-regular);
+      }
+    }
+  }
+
+  @media(width >= 700px) {
+    .announcement-time {
+      display: block;
+      text-align: left;
+      color: var(--color-brown-text);
+      margin-bottom: 0;
+    }
+        
+
     .book-out {
-        font-weight: 700px;
-        font-size: 32px;
-        text-align: center;
-        letter-spacing: -1px;
+      text-align: left;
+      margin-bottom: var(--spacing);
+      font-size: 40px;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .announcement-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .announcement-left {
+        margin: calc(var(--spacing) * 4);
+      }
     }
 
     .announcement-text {
-        font-size: var(--font-base-size);
-        color: var(--color-darker-gray-text);
-        line-height: 24px;
-        text-align: center;
+      line-height: normal;
+      padding: 0;
     }
 
     .go-to-store-button {
-        text-align: center;
+      display: none;
 
-        .button {
-            padding: 0;
-            margin: 0;
-            margin-top: var(--spacing);
-            width: 191px;
-            height: 42px;
-            color: var(--color-brown-text);
-            border-color: var(--color-brown-text);
-            background-color: var(--color-background-announcement);
-
-            &:hover {
-                background-color: var(--color-brown);
-                color: var(--color-white);
-            }
-        }
-    }
-    .see-more-button {
-        text-align: center;
+      .button {
         display: none;
+      }
+    }
 
-        .button {
-            padding: 0;
-            margin: 0;
-            margin-top: var(--spacing);
-            width: 191px;
-            height: 42px;
-            color: var(--color-brown-text);
-            border-color: var(--color-brown-text);
-            background-color: var(--color-background-announcement);
-
-            &:hover {
-                background-color: var(--color-brown);
-                color: var(--color-white);
-            }
-        }
+    .see-more-button {
+      text-align: left;
+      display: block;
     }
 
     .announcement-right {
-        position: relative;
-        display: block;
-
-        .yam-image {
-            position: relative;
-            text-align: center;
-            display: block;
-            margin: 0 auto;
-            margin-top: calc(var(--spacing) * 5);
-            margin-bottom: -140px;
-            
-            img {
-                width: 205px;
-                position: relative;
-                z-index: 1;
-            }
-
-            .shadow {
-                position: absolute;
-                left: 47%;
-                top: 15px;
-                max-width: 205px;
-                transform: translateX(-50%);
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.2);
-                filter: blur(10px);
-                z-index: 0;
-                border-radius: var(--border-radius-regular);
-            }
+      .yam-image {
+        img {
+          width: 440px;
         }
+
+        .shadow {
+          max-width: 440px;
+        }
+      }
     }
-
-    @media(min-width: 700px) {
-
-
-        .announcement-time {
-            display: block;
-            text-align: left;
-            color: var(--color-brown-text);
-            margin-bottom: 0;
-        }
         
-
-        .book-out {
-            text-align: left;
-            margin-bottom: var(--spacing);
-            font-size: 40px;
-            h2 {
-                margin: 0;
-            }
-        }
-
-        .announcement-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .announcement-left {
-
-                margin: calc(var(--spacing) * 4);
-            }
-        }
-
-        .announcement-text {
-            line-height: normal;
-            padding: 0;
-        }
-
-        .go-to-store-button {
-            display: none;
-            .button {
-                display: none;
-            }
-        }
-
-        .see-more-button {
-            text-align: left;
-            display: block;
-        }
-
-        .announcement-right {
-            .yam-image {
-                img {
-                    width: 440px;
-                }
-
-                .shadow {
-                    max-width: 440px;
-                }
-            }
-        }
-        
-    }
+  }
 }

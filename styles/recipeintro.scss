@@ -1,51 +1,52 @@
 .intro-section {
-    display: flex;
-    align-items: center;
-    background-image: url(myndir/pumpkin-img);
-    background-size: cover;
-    height: 600px;
-    position: relative;
-    &::before {
-        /*Skuggi yfir mynd*/
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, var(--color-black) 40%, rgba(0, 0, 0, 0) 100%);
-        z-index: 1;
-    }
+  display: flex;
+  align-items: center;
+  background-image: url("myndir/pumpkin-img");
+  background-size: cover;
+  height: 600px;
+  position: relative;
+
+  &::before {
+    /* Skuggi yfir mynd */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-black) 40%, rgb(0 0 0 / 0%) 100%);
+    z-index: 1;
+  }
 }
 
 .intro-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-    padding-left: 60px;
-    align-items: center;
-    position: relative;
-    z-index: 2; /*Texti yfir skugga*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding-left: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Texti yfir skugga */
     
 }
 
 .intro-content h1 {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 .intro-content p {
-    color: var(--color-dark-gray);
+  color: var(--color-dark-gray);
 }
 
 .intro-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
 }
 
 .intro-text > .intro-p {
-    display: flex;
-    gap: var(--spacing);
+  display: flex;
+  gap: var(--spacing);
 }

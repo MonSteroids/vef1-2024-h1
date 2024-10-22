@@ -1,42 +1,44 @@
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin:0;
+  margin: 0;
   padding: 0;
   background-color: var(--color-background-primary);
 }
   
-  /* og látum erfast á allt */
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+/* og látum erfast á allt */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
   
-  /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-  .sr-only:not(:focus, :active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus, :active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+
 /** Litur á hlekkjum erfist frá foreldri **/
 a {
-    color: inherit;
+  color: inherit;
 }
 
 /*** ATH þarf orugglega eh að breyta ***/
-/*** Allar fyrirsagnir nota  Playfair_Display***/
+
+/*** Allar fyrirsagnir nota  Playfair_Display ***/
 h1,
 h2,
 h3,
@@ -64,16 +66,15 @@ button {
   background-color: var(--color-background-primary);
   color: var(--color-yellow-font);
   margin: var(--spacing);
-
   transition: background-color var(--transition-time-short)
-  var(--transition-timing-function),
-  color var(--transition-time-short) var(--transition-timing-function),
-  border-color var(--transition-time-short) var(--transition-timing-function);
+    var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
   
   &:hover {
     background-color: var(--color-brown);
     color: var(--color-white);
-}
+  }
 }
 
 label {
