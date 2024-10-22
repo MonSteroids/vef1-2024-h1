@@ -81,3 +81,37 @@
   margin-bottom:auto;
   margin-top: auto;
 }
+
+
+/* Play button hover */
+
+.card > .content > .playable {
+  position: relative;
+}
+
+/* hidden */
+.card > .content > .playable > .play-button {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  font-size: 48px;
+  color: white;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity var(--transition-time-short) var(--transition-timing-function);
+}
+
+/* on hover show play sign */
+.card > .content > .playable:hover .play-button {
+  opacity: 1;
+}
+
+/* filter on image when hovered over */
+.card > .content > .playable:hover img{
+  filter: sepia(50%) brightness(70%) saturate(1);
+}
+
+
+.card > .content > .playable img{
+  transition: all var(--transition-time-short) var(--transition-timing-function);
+}
