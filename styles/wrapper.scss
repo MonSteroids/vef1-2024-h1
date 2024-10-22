@@ -70,3 +70,21 @@
     display: none;
   }
 }
+
+.see-more-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .button {
+    margin-right: calc(var(--spacing) * 8);
+    margin-left: calc(var(--spacing) * 8);
+  }
+
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-gray-light);
+  }
+}

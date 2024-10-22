@@ -372,6 +372,22 @@ header {
   }
 }
 
+.see-more-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.see-more-container .button {
+  margin-right: calc(var(--spacing) * 8);
+  margin-left: calc(var(--spacing) * 8);
+}
+.see-more-container .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--color-gray-light);
+}
+
 /** Letur og stærðir **/
 /*** Grunnstærð er 16px ***/
 html {
@@ -1128,27 +1144,99 @@ footer .circle:hover i {
 }
 
 .hero-content p {
-  color: var(--color-dark-gray);
+  color: var(--color-gray);
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: var(--color-5E-gray);
 }
-
-.hero-text > .hero-p {
+.hero-text h1 {
+  color: var(--color-black);
+  text-wrap: nowrap;
+}
+.hero-text .video-h1 {
+  color: var(--color-white);
+}
+.hero-text .hero-p {
   display: flex;
   gap: var(--spacing);
+  flex-direction: column;
+  text-align: left;
+}
+.hero-text .chianti {
+  text-align: left;
+}
+.hero-text .pumpkin-text-blurb {
+  text-align: left;
+  display: none;
+}
+.hero-text .video-text {
+  display: none;
+}
+@media (min-width: 700px) {
+  .hero-text {
+    text-align: left;
+    max-width: 340px;
+    top: 25%;
+  }
+  .hero-text .chianti {
+    display: none;
+  }
+  .hero-text .pumpkin-text-blurb {
+    display: block;
+  }
+  .hero-text .hero-p {
+    flex-direction: row;
+  }
+  .hero-text h1 {
+    font-weight: 700;
+  }
+  .hero-text .video h1 {
+    text-align: left;
+    overflow: visible;
+  }
+  .hero-text .video-text {
+    display: block;
+  }
+}
+@media (min-width: 1000px) {
+  .hero-text {
+    max-width: 500px;
+  }
+  .hero-text h1 {
+    font-size: 60px;
+  }
 }
 
 .method {
-  display: flex;
   gap: var(--spacing);
+  margin: var(--spacing);
+}
+@media (min-width: 700px) {
+  .method {
+    display: flex;
+    margin: 0;
+    margin-top: calc(var(--spacing) * 5);
+  }
+}
+.method span {
+  padding-right: var(--spacing);
 }
 
 .method-ingredients {
   width: 50%;
+}
+@media (min-width: 700px) {
+  .method-ingredients {
+    margin-right: calc(var(--spacing) * 10);
+  }
 }
 
 .method-ingredients h2 {
@@ -1176,6 +1264,57 @@ footer .circle:hover i {
 
 .method-content p {
   color: var(--color-5E-gray);
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  background-image: url(myndir/pumpkin-img);
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+.intro-section::before {
+  /*Skuggi yfir mynd*/
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--color-black) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding-left: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2; /*Texti yfir skugga*/
+}
+
+.intro-content h1 {
+  color: var(--color-black);
+}
+
+.intro-content p {
+  color: var(--color-dark-gray);
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.intro-text > .intro-p {
+  display: flex;
+  gap: var(--spacing);
 }
 
 /*# sourceMappingURL=styles.css.map */

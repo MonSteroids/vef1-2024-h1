@@ -1,10 +1,24 @@
 .method {
-    display: flex;
     gap: var(--spacing);
+    margin: var(--spacing);
+
+    @media(min-width: 700px) {
+        display: flex;
+        margin: 0;
+        margin-top: calc(var(--spacing) * 5);
+    }
+
+    span {
+        padding-right: var(--spacing);
+    }
 }
 
 .method-ingredients {
     width: 50%;
+
+    @media(min-width: 700px) {
+        margin-right: calc(var(--spacing) * 10);
+    }
 }
 
 .method-ingredients h2 {
