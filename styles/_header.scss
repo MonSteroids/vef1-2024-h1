@@ -96,8 +96,8 @@ header {
 
   @media(width >= 900px) {
     margin-top: var(--spacing);
-    padding-left: 155px;
-    padding-right: 155px;
+    //padding-left: 155px;
+    //padding-right: 155px;
 
     &__logo img {
       width: 133px;
@@ -148,9 +148,14 @@ header {
 
 @media (width >= 900px) {
   .navbar {
-    margin-top: 1rem;
-    padding-left: 155px;
-    padding-right: 155px;
+    width: var(--width-offset);
+    max-width: var(--max-width); 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background-primary);
+    margin-top: 0;
   }
 
   .navbar__logo img {
@@ -169,7 +174,7 @@ header {
 
   .navbar__menu li {
     margin: 10px;
-    background-color: #fff;
+    background-color: var(--color-background-primary);
   }
 
   .navbar__menu li a {

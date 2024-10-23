@@ -34,7 +34,7 @@ footer .social-icons {
   margin-bottom: calc(1.5*var(--spacing));
 
   &:hover {
-    color: var(--color-background-primary);
+    color: var(--color-background-white);
   }
 }
   
@@ -76,7 +76,7 @@ footer .circle i {
 }
 
 footer .circle:hover i {
-  color: var(--color-background-primary);
+  color: var(--color-background-white);
   transition: background-color var(--transition-time-short)
     var(--transition-timing-function),
     color var(--transition-time-short) var(--transition-timing-function),

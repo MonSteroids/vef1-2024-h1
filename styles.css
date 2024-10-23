@@ -47,6 +47,7 @@
   /** Litir með notkun **/
   --color-background-primary: var(--color-off-white);
   --color-background-off-white: var(--color-off-white);
+  --color-background-white: var(--color-white);
   --color-background-card: var(--color-white);
   --color-yellow-font: var(--color-yellow);
   --color-gray-font: var(--color-gray);
@@ -56,7 +57,7 @@
   --color-background-announcement: var(--color-beige);
   --color-light-gray-text: var(--color-light-gray);
   --color-dark-gray-text: var(--color-dark-gray);
-  --color-darker-gray-text: var(--color-darker-gray);
+  --color-darker-gray-text: var(--color-darkergray-gray);
   /* Letur stillingar */
   --font-base-size: 1rem;
   --font-small-size: 12px;
@@ -105,7 +106,7 @@ footer .social-icons {
   margin-bottom: calc(1.5 * var(--spacing));
 }
 footer .social-icons:hover {
-  color: var(--color-background-primary);
+  color: var(--color-background-white);
 }
 
 footer .circle {
@@ -139,7 +140,7 @@ footer .circle i {
 }
 
 footer .circle:hover i {
-  color: var(--color-background-primary);
+  color: var(--color-background-white);
   transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
@@ -224,8 +225,6 @@ header {
 @media (width >= 900px) {
   .navbar {
     margin-top: var(--spacing);
-    padding-left: 155px;
-    padding-right: 155px;
   }
   .navbar__logo img {
     width: 133px;
@@ -269,9 +268,14 @@ header {
 
 @media (width >= 900px) {
   .navbar {
-    margin-top: 1rem;
-    padding-left: 155px;
-    padding-right: 155px;
+    width: var(--width-offset);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background-primary);
+    margin-top: 0;
   }
   .navbar__logo img {
     width: 133px;
@@ -286,7 +290,7 @@ header {
   }
   .navbar__menu li {
     margin: 10px;
-    background-color: #fff;
+    background-color: var(--color-background-primary);
   }
   .navbar__menu li a {
     font-size: 20px;
@@ -970,7 +974,7 @@ label {
 }
 .intro .pumpkin-text-wrapper .pumpkin-text-blurb {
   display: none;
-  color: var(--color-black);
+  color: var(--color-darker-gray-text);
 }
 .intro .pumpkin-text-wrapper .see-more-button {
   text-align: center;
