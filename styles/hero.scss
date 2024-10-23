@@ -1,7 +1,7 @@
 .hero-section {
   display: flex;
   align-items: center;
-  background-image: url("myndir/ingredients-table.png");
+  background-image: url('myndir/ingredients-table.png');
   background-size: cover;
   height: 600px;
   position: relative;
@@ -17,20 +17,20 @@
     background: linear-gradient(to right, var(--color-black) 40%, rgb(0 0 0 / 0%) 100%);
     z-index: 1;
   }
+}
 
-  .play-button {
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    cursor: pointer;
+.play-button {
+  position: absolute;
+  right: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
 
-    img {
-      width: 120px;
-      height: 120px;
-    }
-  }
+.play-button img {
+  width: 120px;
+  height: 120px;
 }
 
 .hero-content {
@@ -62,7 +62,7 @@
   position: absolute;
   top: 10%;
   left: 10%;
-  color: var(--color-5E-gray);
+  color: var(--color-darkergray-gray);
 
   h1 {
     color: var(--color-black);
