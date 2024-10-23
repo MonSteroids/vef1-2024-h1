@@ -42,8 +42,8 @@
   --color-off-white: #fafafa;
   --color-beige: #f7f1eb;
   --color-brown: #e3cdb1;
-  --color-D0-gray: #d0d0d0;
-  --color-5E-gray: #5e5b69;
+  --color-verylight-gray: #d0d0d0;
+  --color-darkergray-gray: #5e5b69;
   /** Litir með notkun **/
   --color-background-primary: var(--color-off-white);
   --color-background-off-white: var(--color-off-white);
@@ -68,7 +68,7 @@
   --transition-time-long: 600ms;
   --transition-timing-function: ease-in-out;
   /* button stillingar */
-  --button-width: 190px ;
+  --button-width: 190px;
 }
 
 footer .content {
@@ -634,24 +634,24 @@ label {
   flex: 1;
 }
 
-.card > .content > .text > section {
+.content > .text > section {
   display: flex;
   justify-content: space-between;
   gap: var(--spacing);
 }
 
-.card > .content > .text > p {
+.content > .text > p {
   font-size: var(--font-small-size);
   color: var(--color-gray-font);
 }
 
-.card > .content > .text > section > .special-text {
-  font-family: "Playfair_Display";
+.text > section > .special-text {
+  font-family: "Playfair_Display", serif;
   color: var(--color-black);
   font-size: 18px;
 }
 
-.card > .content > .text > section > a {
+.text > section > a {
   color: var(--color-yellow);
   text-decoration: none;
   font-size: 14px;
@@ -665,29 +665,29 @@ label {
 }
 
 /* hidden */
-.card > .content > .playable > .play-button {
+.content > .playable > .play-button {
   position: absolute;
   top: 38%;
   left: 45%;
   font-size: 48px;
-  color: white;
+  color: var(--color-white);
   opacity: 0;
   text-decoration: none;
   transition: opacity var(--transition-time-short) var(--transition-timing-function);
 }
 
 /* on hover show play sign */
-.card > .content > .playable:hover .play-button {
+.content > .playable:hover .play-button {
   opacity: 1;
 }
 
-/* filter on image when hovered over */
-.card > .content > .playable:hover img {
-  filter: sepia(50%) brightness(70%) saturate(1);
+.content > .playable img {
+  transition: all var(--transition-time-short) var(--transition-timing-function);
 }
 
-.card > .content > .playable img {
-  transition: all var(--transition-time-short) var(--transition-timing-function);
+/* filter on image when hovered over */
+.content > .playable:hover img {
+  filter: sepia(50%) brightness(70%) saturate(1);
 }
 
 /** Cards **/
@@ -738,10 +738,10 @@ label {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  color: black;
+  color: var(--color-black);
 }
 
-.cards > .content-title > .recipes-title label {
+.content-title > .recipes-title label {
   margin-left: auto;
   font-size: 22px;
   font-family: var(--font-family-heading);
@@ -749,20 +749,20 @@ label {
   align-items: center;
 }
 
-.cards > .content-title > .recipes-title label input {
+.recipes-title label input {
   margin-right: var(--spacing);
 }
 
-.cards > .content-title > .recipes-title h1 {
+.content-title > .recipes-title h1 {
   font-size: 60px;
 }
 
 /* Litur fyrir "Check out our" */
-.cards > .content-title > h2 > .part1 {
+.content-title > h2 > .part1 {
   color: var(--color-gray);
 }
 
-.cards > .content-title > h2 > .part2 {
+.content-title > h2 > .part2 {
   color: var(--color-black);
 }
 
@@ -1042,7 +1042,8 @@ label {
   background: linear-gradient(to right, var(--color-black) 40%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
-.hero-section .play-button {
+
+.play-button {
   position: absolute;
   right: 30%;
   top: 50%;
@@ -1050,7 +1051,8 @@ label {
   z-index: 2;
   cursor: pointer;
 }
-.hero-section .play-button img {
+
+.play-button img {
   width: 120px;
   height: 120px;
 }
@@ -1083,7 +1085,7 @@ label {
   position: absolute;
   top: 10%;
   left: 10%;
-  color: var(--color-5E-gray);
+  color: var(--color-darkergray-gray);
 }
 .hero-text h1 {
   color: var(--color-black);
@@ -1168,7 +1170,7 @@ label {
 }
 
 .method-ingredients h2 {
-  color: var(--color-D0-gray);
+  color: var(--color-verylight-gray);
   padding-bottom: 20px;
 }
 
@@ -1186,12 +1188,12 @@ label {
 }
 
 .method-content h2 {
-  color: var(--color-D0-gray);
+  color: var(--color-verylight-gray);
   padding-bottom: 20px;
 }
 
 .method-content p {
-  color: var(--color-5E-gray);
+  color: var(--color-darkergray-gray);
 }
 
 .intro-section {

@@ -59,25 +59,25 @@
   flex: 1;
 }
 
-.card > .content > .text > section {
+.content > .text > section {
   display: flex;
   justify-content: space-between;
   gap: var(--spacing);
 }
 
-.card > .content > .text > p {
+.content > .text > p {
   font-size: var(--font-small-size);
   color: var(--color-gray-font);
 }
 
-.card > .content > .text > section >.special-text {
-  font-family: 'Playfair_Display';
+.text > section > .special-text {
+  font-family: 'Playfair_Display', serif;
   color: var(--color-black);
   font-size: 18px;
 }
 
 
-.card > .content > .text > section > a {
+.text > section > a {
   color: var(--color-yellow);
   text-decoration: none;
   font-size: 14px;
@@ -93,28 +93,30 @@
 }
 
 /* hidden */
-.card > .content > .playable > .play-button {
+.content > .playable > .play-button {
   position: absolute;
   top: 38%;
   left: 45%;
   font-size: 48px;
-  color: white;
+  color: var(--color-white);
   opacity: 0;
   text-decoration: none;
   transition: opacity var(--transition-time-short) var(--transition-timing-function);
 }
 
 /* on hover show play sign */
-.card > .content > .playable:hover .play-button {
+.content > .playable:hover .play-button {
   opacity: 1;
 }
 
+.content > .playable img {
+  transition: all var(--transition-time-short) var(--transition-timing-function);
+}
+
 /* filter on image when hovered over */
-.card > .content > .playable:hover img {
+.content > .playable:hover img {
   filter: sepia(50%) brightness(70%) saturate(1);
 }
 
 
-.card > .content > .playable img {
-  transition: all var(--transition-time-short) var(--transition-timing-function);
-}
+

@@ -49,10 +49,10 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  color: black;
+  color: var(--color-black);
 }
 
-.cards > .content-title > .recipes-title label {
+.content-title > .recipes-title label {
   margin-left: auto;
   font-size: 22px;
   font-family: var(--font-family-heading);
@@ -60,11 +60,11 @@
   align-items: center;
 }
 
-.cards > .content-title > .recipes-title label input {
+.recipes-title label input {
   margin-right: var(--spacing);
 }
 
-.cards > .content-title > .recipes-title h1 {
+.content-title > .recipes-title h1 {
   font-size: 60px;
 }
 
@@ -72,11 +72,11 @@
 
 
 /* Litur fyrir "Check out our" */
-.cards > .content-title > h2 > .part1 {
+.content-title > h2 > .part1 {
   color: var(--color-gray);
 }
 
-.cards > .content-title > h2 > .part2 {
+.content-title > h2 > .part2 {
   color: var(--color-black);
 }
 
