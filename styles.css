@@ -24,29 +24,29 @@
   --gutter: 30px;
   --offset: 20px;
   /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-  --vertical-space:calc(($gutter) * 1);
-  --vertical-space-large:calc(($gutter) * 1.5);
+  --vertical-space: calc(($gutter) * 1);
+  --vertical-space-large: calc(($gutter) * 1.5);
   /* Breidd á efni með offset */
   --width-offset: calc(100% - (2 * var(--offset)));
   /* Menu */
   --menu-icon-width: 20px;
   --menu-icon-height: 13px;
   /** Litir með nafni **/
-  --color-yellow: #E3CDB1;
+  --color-yellow: #e3cdb1;
   --color-white: #fff;
   --color-black: #000;
   --color-gray-light: #e7e7e7;
   --color-gray: #9b9b9b;
   --color-gray-lighter: #d6d6d6;
-  --color-dark-gray:#9B9B9B;
-  --color-off-white:#fafafa;
-  --color-beige:#f7f1eb;
-  --color-brown:#e3cdb1;
-  --color-D0-gray: #D0D0D0;
-  --color-5E-gray: #5E5B69;
+  --color-dark-gray: #9b9b9b;
+  --color-off-white: #fafafa;
+  --color-beige: #f7f1eb;
+  --color-brown: #e3cdb1;
+  --color-D0-gray: #d0d0d0;
+  --color-5E-gray: #5e5b69;
   /** Litir með notkun **/
   --color-background-primary: var(--color-off-white);
-  --color-background-off-white:var(--color-off-white);
+  --color-background-off-white: var(--color-off-white);
   --color-background-card: var(--color-white);
   --color-yellow-font: var(--color-yellow);
   --color-gray-font: var(--color-gray);
@@ -221,7 +221,7 @@ header {
 .navbar__menu li:last-child {
   border-bottom: none;
 }
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .navbar {
     margin-top: var(--spacing);
     padding-left: 155px;
@@ -267,7 +267,7 @@ header {
   text-align: center;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .navbar {
     margin-top: 1rem;
     padding-left: 155px;
@@ -286,7 +286,7 @@ header {
   }
   .navbar__menu li {
     margin: 10px;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   .navbar__menu li a {
     font-size: 20px;
@@ -357,7 +357,7 @@ header {
 .want-some-action {
   display: none;
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .want-some-action {
     display: block;
   }
@@ -366,7 +366,7 @@ header {
 .all-the-news {
   text-align: center;
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .all-the-news {
     display: none;
   }
@@ -402,7 +402,7 @@ html {
   src: url("../fonts/Poppins/Poppins-Regular.ttf") format("woff2");
 }
 @font-face {
-  font-family: Playfair_Display;
+  font-family: "Playfair_Display";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -446,7 +446,7 @@ a {
 }
 
 /*** ATH þarf orugglega eh að breyta ***/
-/*** Allar fyrirsagnir nota  Playfair_Display***/
+/*** Allar fyrirsagnir nota  Playfair_Display ***/
 h1,
 h2,
 h3,
@@ -505,7 +505,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: centeR;
+  justify-content: center;
 }
 
 .newsletter h2,
@@ -565,7 +565,7 @@ label {
   font-family: var(--font-family-base);
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   .newsletter > .content section {
     display: block;
     margin: var(--spacing);
@@ -578,84 +578,12 @@ label {
     margin: 0;
   }
 }
-footer .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: calc(2 * var(--spacing));
-  margin-bottom: calc(2 * var(--spacing));
-}
-
-footer .content p {
-  font-size: var(--font-footer-size);
-}
-
-footer .content .bottom-text {
-  color: var(--color-footer-bottom-text);
-}
-
-footer > .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-footer .social-icons {
-  display: flex;
-  flex-direction: row;
-  color: var(--color-footer-bottom-text);
-  gap: 15px;
-  margin-top: calc(1.5 * var(--spacing));
-  margin-bottom: calc(1.5 * var(--spacing));
-}
-footer .social-icons:hover {
-  color: var(--color-background-primary);
-}
-
-footer .circle {
-  border: 2px solid var(--color-footer-bottom-text);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  /* Flexbox to center the icons inside the circle */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
-}
-
-footer .circle:hover {
-  background-color: var(--color-footer-bottom-text);
-}
-
-footer .circle a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-
-footer .circle i {
-  font-size: 18px; /* icon size */
-  color: var(--color-footer-bottom-text);
-}
-
-footer .circle:hover i {
-  color: var(--color-background-primary);
-  transition: background-color var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
-}
-
 /** Card **/
 .card {
   display: flex;
   width: 100%;
   flex-direction: column;
-  /*width: calc(100%/3 - var(--spacing));*/
+  /* width: calc(100%/3 - var(--spacing)); */
   background-color: var(--color-background-card);
   margin-bottom: var(--spacing);
 }
@@ -666,8 +594,8 @@ footer .circle:hover i {
 
 .card > .content img {
   display: block;
-  /*border-top-left-radius: var(--border-radius-regular);
-  border-top-right-radius: var(--border-radius-regular);*/
+  /* border-top-left-radius: var(--border-radius-regular);
+  border-top-right-radius: var(--border-radius-regular); */
   width: 100%;
   height: 290px;
   object-fit: cover;
@@ -768,12 +696,12 @@ footer .circle:hover i {
   width: 100%;
   color: var(--color-gray);
   /*
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 3fr;
-  gap: var(--vertical-space); 
-  justify-items: center;
-  width: 100%; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3fr;
+    gap: var(--vertical-space); 
+    justify-items: center;
+    width: 100%; */
 }
 
 .cards > .title {
@@ -804,7 +732,7 @@ footer .circle:hover i {
   margin-top: var(--spacing);
 }
 
-/* Sérstakur header fyrir recipes síðu*/
+/* Sérstakur header fyrir recipes síðu */
 .cards > .content-title > .recipes-title {
   display: flex;
   width: 100%;
@@ -951,7 +879,7 @@ footer .circle:hover i {
   z-index: 0;
   border-radius: var(--border-radius-regular);
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .announcement-section .announcement-time {
     display: block;
     text-align: left;
@@ -1061,7 +989,7 @@ footer .circle:hover i {
   background-color: var(--color-brown);
   color: var(--color-white);
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .intro .pumpkin-img img {
     top: 50%;
     left: 50%;
@@ -1084,7 +1012,7 @@ footer .circle:hover i {
     text-align: left;
   }
 }
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
   .intro .pumpkin-img img {
     top: 50%;
     left: 50%;
@@ -1098,13 +1026,13 @@ footer .circle:hover i {
 .hero-section {
   display: flex;
   align-items: center;
-  background-image: url(myndir/ingredients-table.png);
+  background-image: url("myndir/ingredients-table.png");
   background-size: cover;
   height: 600px;
   position: relative;
 }
 .hero-section::before {
-  /*Skuggi yfir mynd*/
+  /* Skuggi yfir mynd */
   content: "";
   position: absolute;
   left: 0;
@@ -1136,7 +1064,7 @@ footer .circle:hover i {
   padding-left: 60px;
   align-items: center;
   position: relative;
-  z-index: 2; /*Texti yfir skugga*/
+  z-index: 2; /* Texti yfir skugga */
 }
 
 .hero-content h1 {
@@ -1180,7 +1108,7 @@ footer .circle:hover i {
 .hero-text .video-text {
   display: none;
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .hero-text {
     text-align: left;
     max-width: 340px;
@@ -1206,7 +1134,7 @@ footer .circle:hover i {
     display: block;
   }
 }
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
   .hero-text {
     max-width: 500px;
   }
@@ -1219,7 +1147,7 @@ footer .circle:hover i {
   gap: var(--spacing);
   margin: var(--spacing);
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .method {
     display: flex;
     margin: 0;
@@ -1233,7 +1161,7 @@ footer .circle:hover i {
 .method-ingredients {
   width: 50%;
 }
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .method-ingredients {
     margin-right: calc(var(--spacing) * 10);
   }
@@ -1269,13 +1197,13 @@ footer .circle:hover i {
 .intro-section {
   display: flex;
   align-items: center;
-  background-image: url(myndir/pumpkin-img);
+  background-image: url("myndir/pumpkin-img");
   background-size: cover;
   height: 600px;
   position: relative;
 }
 .intro-section::before {
-  /*Skuggi yfir mynd*/
+  /* Skuggi yfir mynd */
   content: "";
   position: absolute;
   left: 0;
@@ -1295,7 +1223,7 @@ footer .circle:hover i {
   padding-left: 60px;
   align-items: center;
   position: relative;
-  z-index: 2; /*Texti yfir skugga*/
+  z-index: 2; /* Texti yfir skugga */
 }
 
 .intro-content h1 {
