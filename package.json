@@ -8,7 +8,11 @@
     "sass": "sass styles.scss styles.css",
     "sass-watch": "sass --watch styles.scss styles.css",
     "dev": "concurrently npm:sass-watch npm:browser-sync",
-    "lint": "stylelint styles.scss ./**/*.scss"
+    "lint": "stylelint styles.scss ./**/*.scss",
+    "copy:html": "cpy ./.html ./build/",
+    "copy:js": "cpy ./.js ./build/",
+    "copy:css": "cpy ./.css ./build/",
+    "build": "concurrently npm:copy:*"
   },
   "keywords": [],
   "author": "",

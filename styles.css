@@ -745,7 +745,7 @@ label {
 }
 
 .recipes-title h2 {
-  font-size: 30px;
+  font-size: 24px;
 }
 @media (width >= 700px) {
   .recipes-title h2 {
