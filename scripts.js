@@ -1,6 +1,6 @@
 //Script fyrir hamburger icon
 document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.querySelector('.navbar__menu-toggle');
+    const toggleButton = document.querySelector('.navbar-menu-toggle');
     const navbar = document.querySelector('.navbar');
     if (toggleButton) {
       toggleButton.addEventListener('click', function() {

@@ -85,6 +85,14 @@
   font-size: var(--font-small-size);
 }
 
+.recipes-title h2 {
+  font-size: 30px;
+
+  @media(width >= 700px) {
+    font-size: 60px;
+  }
+}
+
 
 
 
