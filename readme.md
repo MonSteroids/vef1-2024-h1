@@ -8,7 +8,7 @@
 ## Hvernig skal keyra verkefnið
 
 1. Sækja verkefnið:
- - Smellut á græna "Code" takkann á GitHub síðunni til að sækja zip skránna eða
+ - Smelltu á græna "Code" takkann á GitHub síðunni til að sækja zip skránna eða
  notaðu `git clone`.
 
 ```bash
@@ -31,7 +31,7 @@ npm install
 ```bash
 npm run dev
 ```
-
+eða
 ```bash
 npm start
 ```
@@ -41,19 +41,19 @@ npm start
 ## Skipulag verkefnis
 Verkefninu er skipt niður í eftirfarandi möppur:
 
-- *fonts/* - Inniheldur öll letur sem eru notuð.
-- *myndir/* - Inniheldur allar myndir og tákn sem eru notuð.
-- *node_modules/* - Inniheldur alla npm pakka sem eru notaðir til að keyra forritið.
-- *pages/* - Inniheldur þrjár síður: `recipe.html`, `recipes.html`, og `videos.html`
-- *styles/* - Inniheldur allar SCSS skrár sem við höfum skrifað fyrir verkefnið.
+- **fonts/** - Inniheldur öll letur sem eru notuð.
+- **myndir/** - Inniheldur allar myndir og tákn sem eru notuð.
+- **node_modules/** - Inniheldur alla npm pakka sem eru notaðir til að keyra forritið.
+- **pages/** - Inniheldur þrjár síður: `recipe.html`, `recipes.html`, og `videos.html`
+- **styles/** - Inniheldur allar SCSS skrár sem við höfum skrifað fyrir verkefnið.
 
 Auk þess eru "Höfuðskrár" í rót verkefnisins:
-- *grid.scss* - Inniheldur stillingar til að fylgjast með skölun á verkefni.
-- *index.html* - Aðalsíða verkefnis.
-- *scripts.js* - Inniheldur allan JavaScript kóða.
-- *styles.css* - Samansafn af öllum SCSS skrám.
-- *styles.css.map* - Inniheldur kóða sem tengir CSS skránna við SCSS skrárnar.
-- *styles.scss* - Inniheldur "import" á öllum SCSS skrám til að þýða yfir í CSS.
+- **grid.scss** - Inniheldur stillingar til að fylgjast með skölun á verkefni.
+- **index.html** - Aðalsíða verkefnis.
+- **scripts.js** - Inniheldur allan JavaScript kóða.
+- **styles.css** - Samansafn af öllum SCSS skrám.
+- **styles.css.map** - Inniheldur kóða sem tengir CSS skránna við SCSS skrárnar.
+- **styles.scss** - Inniheldur "import" á öllum SCSS skrám til að þýða yfir í CSS.
 
 ---
 
