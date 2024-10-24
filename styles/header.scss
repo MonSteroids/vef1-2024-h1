@@ -89,11 +89,15 @@ header {
 }
 
 @media (width >= 900px) {
+  header {
+    background-color: var(--color-background-primary);
+  }
+
   .navbar {
     width: var(--width-offset);
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: var(--spacing);
+    margin-top: 0;
     background-color: var(--color-background-primary);
     display: flex;
     justify-content: space-between;
