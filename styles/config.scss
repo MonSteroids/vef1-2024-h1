@@ -28,10 +28,6 @@
   --columns: 12;
   --gutter: 30px;
   --offset: 20px;
-
-  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-  --vertical-space: calc(($gutter) * 1);
-  --vertical-space-large: calc(($gutter) * 1.5);
   
   /* Breidd á efni með offset */
   --width-offset: calc(100% - (2 * var(--offset)));
